@@ -86,13 +86,13 @@
 }
 
 + (RKObjectMapping *)instanceObjectMapping {
-//    RKDynamicMapping *mapping = [RKDynamicMapping new];
 
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self];
 
     [mapping addAttributeMappingsFromDictionary:@{
             @"id"              : @"ID",
             @"name"            : @"name",
+            @"length"          : @"length",
             @"ending"          : @"endingID",
             @"intro"           : @"introID",
             @"explicit"        : @"explicit",
@@ -107,52 +107,21 @@
          }
     ];
 
-//    [mapping addAttributeMappingsFromArray:@[@"length"]];
+    [mapping addPropertyMapping:
+            [RKRelationshipMapping relationshipMappingFromKeyPath:@"album"
+                                                        toKeyPath:@"album"
+                                                      withMapping:[ASAlbum instanceObjectMapping]]];
 
-//    [mapping addPropertyMapping:
-//            [RKRelationshipMapping relationshipMappingFromKeyPath:@"album"
-//                                                        toKeyPath:@"album"
-//                                                      withMapping:[ASAlbum instanceObjectMapping]]];
-//
-//    [mapping addPropertyMapping:
-//            [RKRelationshipMapping relationshipMappingFromKeyPath:@"artist"
-//                                                        toKeyPath:@"artist"
-//                                                      withMapping:[ASArtist instanceObjectMapping]]];
-
-//    RKDynamicMapping* dynamicMapping = [RKDynamicMapping new];
-
-//    RKObjectMapping *numberMapping =  [RKObjectMapping mappingForClass:[NSObject class]];
-
-//    [mapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"genres" expectedValue:@"genres" objectMapping:numberMapping]];
-//    [mapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"ending" expectedValue:@"ending" objectMapping:numberMapping]];
-
-    // Connect a response descriptor for our dynamic mapping
-//    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:dynamicMapping
-//                                                                                       pathPattern:nil keyPath:@"people"
-//                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-//    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
-
-// Option 1: Configure the dynamic mapping via matchers
-//    [dynamicMapping setObjectMapping:boyMapping whenValueOfKeyPath:@"type" isEqualTo:@"Boy"];
-//    [dynamicMapping setObjectMapping:girlMapping whenValueOfKeyPath:@"type" isEqualTo:@"Girl"];
-
-// Option 2: Configure the dynamic mapping via a block
-//    [dynamicMapping setObjectMappingForRepresentationBlock:RKObjectMapping *^(id representation) {
-//        if ([[representation valueForKey:@"type"] isEqualToString:@"Boy"]) {
-//            return boyMapping;
-//        } else if ([[representation valueForKey:@"type"] isEqualToString:@"Girl"]) {
-//            return girlMapping;
-//        }
-//
-//        return nil;
-//    };
+    [mapping addPropertyMapping:
+            [RKRelationshipMapping relationshipMappingFromKeyPath:@"artist"
+                                                        toKeyPath:@"artist"
+                                                      withMapping:[ASArtist instanceObjectMapping]]];
     return mapping;
 }
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"ASTrack: id: %i, name: %@", self.ID, self.name];
 }
-
 
 - (void)loadStreamingURLWithSuccess:(void (^)(ASTrack *))success
                             failure:(void (^)(NSError *))failure {
