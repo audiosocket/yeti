@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ASObject Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Yeti </a></h1>
+				<a id="developerHome" href="../index.html">Audiosocket</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ASObject Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/ID">&nbsp;&nbsp;&nbsp;&nbsp;ID</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/addInstanceResponseDescriptor">&nbsp;&nbsp;&nbsp;&nbsp;+ addInstanceResponseDescriptor</option>
+	
+	<option value="//api/name/collectionResponseDescriptor">&nbsp;&nbsp;&nbsp;&nbsp;+ collectionResponseDescriptor</option>
+	
+	<option value="//api/name/endpointRoot">&nbsp;&nbsp;&nbsp;&nbsp;+ endpointRoot</option>
+	
+	<option value="//api/name/initializeMappings:">&nbsp;&nbsp;&nbsp;&nbsp;+ initializeMappings:</option>
+	
+	<option value="//api/name/instanceGetEndpoint">&nbsp;&nbsp;&nbsp;&nbsp;+ instanceGetEndpoint</option>
+	
+	<option value="//api/name/instanceObjectMapping">&nbsp;&nbsp;&nbsp;&nbsp;+ instanceObjectMapping</option>
+	
+	<option value="//api/name/objectManager">&nbsp;&nbsp;&nbsp;&nbsp;+ objectManager</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithID:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithID:</option>
+	
+	<option value="//api/name/loadFromPath:parameters:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- loadFromPath:parameters:success:failure:</option>
+	
+	<option value="//api/name/loadWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- loadWithSuccess:failure:</option>
+	
+	<option value="//api/name/resolve:">&nbsp;&nbsp;&nbsp;&nbsp;- resolve:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing ASObject data model Properties">Accessing ASObject data model Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Mapping response data to object proproperties">Mapping response data to object proproperties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Defining destination endpoints.">Defining destination endpoints.</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating a new instance">Creating a new instance</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ID">ID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addInstanceResponseDescriptor">addInstanceResponseDescriptor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionResponseDescriptor">collectionResponseDescriptor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endpointRoot">endpointRoot</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initializeMappings:">initializeMappings:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/instanceGetEndpoint">instanceGetEndpoint</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/instanceObjectMapping">instanceObjectMapping</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectManager">objectManager</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithID:">initWithID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadFromPath:parameters:success:failure:">loadFromPath:parameters:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadWithSuccess:failure:">loadWithSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resolve:">resolve:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ASObject Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ASObject Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ASObject.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Base class all Audiosocket data models subclass. Since most models have
+both a &lsquo;name&rsquo; and an <a href="#//api/name/ID">ID</a> attribute they are defined here.</p>
+
+<p>This class interfaces with the underlying <a href="http://restkit.org">RestKit</a> library
+which handles the object mapping and underlying transport. This class is the only
+class which exposes any RestKit classes. By doing so it more advanced scenarios
+can be implemented.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Accessing ASObject data model Properties" name="task_Accessing ASObject data model Properties"></a>
+						<h3 class="subsubtitle task-title">Accessing ASObject data model Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ID">&nbsp;&nbsp;ID</a></code>
+		<span class="tooltip"><p>Primary ID of this ASObject instance.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+		<span class="tooltip"><p>Name of this ASObject instance, e.g. &ldquo;Don&rsquo;t Stop Believing&rdquo;</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Mapping response data to object proproperties" name="task_Mapping response data to object proproperties"></a>
+						<h3 class="subsubtitle task-title">Mapping response data to object proproperties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectManager">+&nbsp;objectManager</a></code>
+		<span class="tooltip"><p>Return the RestKit object manager singleton.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initializeMappings:">+&nbsp;initializeMappings:</a></code>
+		<span class="tooltip"><p>Initializes the RestKit mapping for this class. Defaults to calling only
+<a href="#//api/name/addInstanceResponseDescriptor">[ASObject addInstanceResponseDescriptor]</a>. It is overridden by classes
+that contain associated entities.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addInstanceResponseDescriptor">+&nbsp;addInstanceResponseDescriptor</a></code>
+		<span class="tooltip"><p>Adds an RKResponseDescriptor descriptor as an instance descriptor. You
+should not have to make changes to this class, but it is exposed should
+you decide to override. See (RestKit object mapping)[<a href="https://github.com/RestKit/RestKit/wiki/Object-mapping">https://github.com/RestKit/RestKit/wiki/Object-mapping</a>]
+for details should you need them.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionResponseDescriptor">+&nbsp;collectionResponseDescriptor</a></code>
+		<span class="tooltip"><p>Adds an RKResponseDescriptor descriptor as an collection descriptor. You
+should not have to make changes to this class, but it is exposed should
+you decide to override. See (RestKit object mapping)[<a href="https://github.com/RestKit/RestKit/wiki/Object-mapping">https://github.com/RestKit/RestKit/wiki/Object-mapping</a>]
+for details should you need them.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/instanceObjectMapping">+&nbsp;instanceObjectMapping</a></code>
+		<span class="tooltip"><p>Returns an RKObjectMapping instance to map the properties of this object.
+Defaults to <a href="#//api/name/ID">ID</a> and <a href="#//api/name/name">name</a> mapping. Override to map attributes.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Defining destination endpoints." name="task_Defining destination endpoints."></a>
+						<h3 class="subsubtitle task-title">Defining destination endpoints.</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/endpointRoot">+&nbsp;endpointRoot</a></code>
+		<span class="tooltip"><p>For and endpoint like &ldquo;<a href="https://api.audiosocket.com/v5/moods/345">https://api.audiosocket.com/v5/moods/345</a>&rdquo;
+this method should return &ldquo;moods&rdquo;.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/instanceGetEndpoint">+&nbsp;instanceGetEndpoint</a></code>
+		<span class="tooltip"><p>Return the endpoint path, not including the baseURL portion, used to
+fetch an instance of this class. It defaults &lsquo;&lt;endpoint-root>/:id&rsquo;.
+When actually fetching instances &lsquo;:id&rsquo; is replaced with the actual
+id of the object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating a new instance" name="task_Creating a new instance"></a>
+						<h3 class="subsubtitle task-title">Creating a new instance</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithID:">&ndash;&nbsp;initWithID:</a></code>
+		<span class="tooltip"><p>Initialize an instance of this class with the <a href="#//api/name/ID">ID</a> provided.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadWithSuccess:failure:">&ndash;&nbsp;loadWithSuccess:failure:</a></code>
+		<span class="tooltip"><p>Loads an instance from the server. If you only have an
+<a href="#//api/name/ID">ID</a> for a instance you can do something like the following:</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadFromPath:parameters:success:failure:">&ndash;&nbsp;loadFromPath:parameters:success:failure:</a></code>
+		<span class="tooltip"><p>Loads an instance from the server using the endpoint supplied. This is useful
+for classes that don&rsquo;t have an <a href="#//api/name/ID">ID</a>, e.g. <a href="../Classes/ASContext.html">ASContext</a></p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resolve:">&ndash;&nbsp;resolve:</a></code>
+		<span class="tooltip"><p>Return &lsquo;self&rsquo; if target<a href="#//api/name/ID">ID</a> is equal self.<a href="#//api/name/ID">ID</a>. Overriden in subclasses that
+contain children.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/ID" title="ID"></a>
+	<h3 class="subsubtitle method-title">ID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Primary ID of this ASObject instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger ID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Name of this ASObject instance, e.g. &ldquo;Don&rsquo;t Stop Believing&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *name</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addInstanceResponseDescriptor" title="addInstanceResponseDescriptor"></a>
+	<h3 class="subsubtitle method-title">addInstanceResponseDescriptor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds an RKResponseDescriptor descriptor as an instance descriptor. You
+should not have to make changes to this class, but it is exposed should
+you decide to override. See (RestKit object mapping)[<a href="https://github.com/RestKit/RestKit/wiki/Object-mapping">https://github.com/RestKit/RestKit/wiki/Object-mapping</a>]
+for details should you need them.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (RKResponseDescriptor *)addInstanceResponseDescriptor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionResponseDescriptor" title="collectionResponseDescriptor"></a>
+	<h3 class="subsubtitle method-title">collectionResponseDescriptor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds an RKResponseDescriptor descriptor as an collection descriptor. You
+should not have to make changes to this class, but it is exposed should
+you decide to override. See (RestKit object mapping)[<a href="https://github.com/RestKit/RestKit/wiki/Object-mapping">https://github.com/RestKit/RestKit/wiki/Object-mapping</a>]
+for details should you need them.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (RKResponseDescriptor *)collectionResponseDescriptor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/endpointRoot" title="endpointRoot"></a>
+	<h3 class="subsubtitle method-title">endpointRoot</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>For and endpoint like &ldquo;<a href="https://api.audiosocket.com/v5/moods/345">https://api.audiosocket.com/v5/moods/345</a>&rdquo;
+this method should return &ldquo;moods&rdquo;.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)endpointRoot</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note: must be overridden by subclass.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initializeMappings:" title="initializeMappings:"></a>
+	<h3 class="subsubtitle method-title">initializeMappings:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes the RestKit mapping for this class. Defaults to calling only
+<a href="#//api/name/addInstanceResponseDescriptor">[ASObject addInstanceResponseDescriptor]</a>. It is overridden by classes
+that contain associated entities.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)initializeMappings:(RKObjectManager *)<em>objectManager</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectManager</em></dt>
+			<dd><p>RestKit RKObjectManager to add the mapping to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/instanceGetEndpoint" title="instanceGetEndpoint"></a>
+	<h3 class="subsubtitle method-title">instanceGetEndpoint</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the endpoint path, not including the baseURL portion, used to
+fetch an instance of this class. It defaults &lsquo;&lt;endpoint-root>/:id&rsquo;.
+When actually fetching instances &lsquo;:id&rsquo; is replaced with the actual
+id of the object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)instanceGetEndpoint</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/instanceObjectMapping" title="instanceObjectMapping"></a>
+	<h3 class="subsubtitle method-title">instanceObjectMapping</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an RKObjectMapping instance to map the properties of this object.
+Defaults to <a href="#//api/name/ID">ID</a> and <a href="#//api/name/name">name</a> mapping. Override to map attributes.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (RKObjectMapping *)instanceObjectMapping</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectManager" title="objectManager"></a>
+	<h3 class="subsubtitle method-title">objectManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the RestKit object manager singleton.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (RKObjectManager *)objectManager</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithID:" title="initWithID:"></a>
+	<h3 class="subsubtitle method-title">initWithID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize an instance of this class with the <a href="#//api/name/ID">ID</a> provided.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ASObject *)initWithID:(NSInteger)<em>ID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ID</em></dt>
+			<dd><p>Primary <a href="#//api/name/ID">ID</a> of this instance.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadFromPath:parameters:success:failure:" title="loadFromPath:parameters:success:failure:"></a>
+	<h3 class="subsubtitle method-title">loadFromPath:parameters:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads an instance from the server using the endpoint supplied. This is useful
+for classes that don&rsquo;t have an <a href="#//api/name/ID">ID</a>, e.g. <a href="../Classes/ASContext.html">ASContext</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadFromPath:(NSString *)<em>path</em> parameters:(NSDictionary *)<em>params</em> success:(void ( ^ ) ( id ))<em>success</em> failure:(void ( ^ ) ( NSError *))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>Path specifying endpoint that will an instance of this class. It
+does not include the baseURL portion of the path.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>params</em></dt>
+			<dd><p>Optional query parameters that added to the request path.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Called when the request returns successfully. The retrieved
+instance is passed to this block.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied called when an error occurs during the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadWithSuccess:failure:" title="loadWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">loadWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads an instance from the server. If you only have an
+<a href="#//api/name/ID">ID</a> for a instance you can do something like the following:</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadWithSuccess:(void ( ^ ) ( id asObject ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>Invoked when the request has completed successfully. &lsquo;self&rsquo; is</p>
+
+<pre><code>            passed to the block.
+</code></pre></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>Invoked, if supplied, when an error occurs during the request or</p>
+
+<pre><code>            subsequent data mapping.
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<pre><code>   ASTrack *track = [[ASTrack alloc] initWithID:20];
+   [track loadWithSuccess:^(ASTrack *loadTrack) {
+                    // Do something with the newly loaded track...
+                  }
+                  failure:^(NSError *error) {
+                    // Handle error condition...
+                  }
+   ];
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resolve:" title="resolve:"></a>
+	<h3 class="subsubtitle method-title">resolve:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return &lsquo;self&rsquo; if target<a href="#//api/name/ID">ID</a> is equal self.<a href="#//api/name/ID">ID</a>. Overriden in subclasses that
+contain children.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ASObject *)resolve:(NSNumber *)<em>targetID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>targetID</em></dt>
+			<dd><p><a href="#//api/name/ID">ID</a> to compare to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASObject.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Audiosocket. All rights reserved. (Last updated: 2013-01-25)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

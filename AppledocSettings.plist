@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--project-name</key>
+	<string>Yeti</string>
+
+    <key>--project-company</key>
+	<string>Audiosocket</string>
+
+    <key>--company-id</key>
+    <string>com.audiosocket</string>
+
+    <key>--output</key>
+    <string>./appledocs</string>
+
+    <key>--repeat-first-par</key>
+    <false/>
+
+    <key>--include</key>
+    <array>
+        <string>Yeti</string>
+    </array>
+
+    <key>--ignore</key>
+    <array>
+        <string>Pods</string>
+        <string>appledocs</string>
+        <string>.m</string>
+        <string>YetiTests</string>
+    </array>
+
+    <key>--no-create-docset</key>
+    <true/>
+</dict>
+</plist>
