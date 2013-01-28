@@ -8,7 +8,7 @@ independent musicians. Need help? Want more info or an API key?
 Drop us a line at api@audiosocket.com and we'll get you squared away.
 
 Please take time to read through the [Audiosocket MaaS API](http://http://develop.audiosocket.com/) to get
-a better understanding of the underlying REST API that Yeti accesses.
+a better understanding of the underlying REST API that Yeti leverages.
 The underlying data used for querying the API and paginating are very similar in Yeti.
 Class level documentation for Yeti is available at http://develop.audiosocket.com/yeti
 
