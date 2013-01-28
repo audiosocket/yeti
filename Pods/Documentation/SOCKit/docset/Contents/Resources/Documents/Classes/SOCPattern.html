@@ -1,0 +1,846 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SOCPattern Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SOCKit 1.1 </a></h1>
+				<a id="developerHome" href="../index.html">Jeff Verkoeyen</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SOCPattern Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/patternWithString:">&nbsp;&nbsp;&nbsp;&nbsp;+ patternWithString:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithString:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithString:</option>
+	
+	<option value="//api/name/parameterDictionaryFromSourceString:">&nbsp;&nbsp;&nbsp;&nbsp;- parameterDictionaryFromSourceString:</option>
+	
+	<option value="//api/name/performSelector:onObject:sourceString:">&nbsp;&nbsp;&nbsp;&nbsp;- performSelector:onObject:sourceString:</option>
+	
+	<option value="//api/name/stringFromObject:">&nbsp;&nbsp;&nbsp;&nbsp;- stringFromObject:</option>
+	
+	<option value="//api/name/stringFromObject:withBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- stringFromObject:withBlock:</option>
+	
+	<option value="//api/name/stringMatches:">&nbsp;&nbsp;&nbsp;&nbsp;- stringMatches:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/patternWithString:">patternWithString:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithString:">initWithString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parameterDictionaryFromSourceString:">parameterDictionaryFromSourceString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performSelector:onObject:sourceString:">performSelector:onObject:sourceString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromObject:">stringFromObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringFromObject:withBlock:">stringFromObject:withBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringMatches:">stringMatches:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SOCPattern Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SOCPattern Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SOCKit.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>String &lt;&ndash;> Object Coding.</p>
+
+<p>Code information from strings into objects and vice versa.</p>
+
+<p>A pattern is a string with parameter names prefixed by colons (&ldquo;:&rdquo;).
+An example of a pattern string with one parameter named :username is:
+api.github.com/users/:username/gists</p>
+
+<p>Patterns, once created, can be used to efficiently turn objects into strings and
+vice versa. Respectively, these techniques are referred to as inbound and outbound.</p>
+
+<p>Inbound examples (creating strings from objects):</p>
+
+<p>pattern: api.github.com/users/:username/gists</p>
+
+<blockquote><p>[pattern stringFromObject:[GithubUser userWithUsername:@&ldquo;jverkoey&rdquo;]];
+returns: api.github.com/users/jverkoey/gists</p></blockquote>
+
+<p>pattern: api.github.com/repos/:username/:repo/issues</p>
+
+<blockquote><p>[pattern stringFromObject:[GithubRepo repoWithUsername:@&ldquo;jverkoey&rdquo; repo:@&ldquo;sockit&rdquo;]];
+returns: api.github.com/repos/jverkoey/sockit/issues</p></blockquote>
+
+<p>Outbound examples (performing selectors on objects with values from given strings):</p>
+
+<p>pattern: github.com/:username</p>
+
+<blockquote><p>[pattern performSelector:@selector(initWithUsername:) onObject:[GithubUser class] sourceString:@&ldquo;github.com/jverkoey&rdquo;];
+returns: an allocated, initialized, and autoreleased GithubUser object with @&ldquo;jverkoey&rdquo; passed
+to the initWithUsername: method.</p></blockquote>
+
+<p>pattern: github.com/:username/:repo</p>
+
+<blockquote><p>[pattern performSelector:@selector(initWithUsername:repoName:) onObject:[GithubUser class] sourceString:@&ldquo;github.com/jverkoey/sockit&rdquo;];
+returns: an allocated, initialized, and autoreleased GithubUser object with @&ldquo;jverkoey&rdquo; and
+@&ldquo;sockit&rdquo; passed to the initWithUsername:repoName: method.</p></blockquote>
+
+<p>pattern: github.com/:username</p>
+
+<blockquote><p>[pattern performSelector:@selector(setUsername:) onObject:githubUser sourceString:@&ldquo;github.com/jverkoey&rdquo;];
+returns: nil because setUsername: does not have a return value. githubUser&rsquo;s username property
+is now @&ldquo;jverkoey&rdquo;.</p></blockquote>
+
+<p>Note 1: Parameters must be separated by string literals</p>
+
+<p>Pattern parameters must be separated by some sort of non-parameter character.
+This means that you can&rsquo;t define a pattern like :user:repo. This is because when we
+get around to wanting to decode the string back into an object we need some sort of
+delimiter between the parameters.</p>
+
+<p>Note 2: When colons aren&rsquo;t seen as parameters</p>
+
+<p>If you have colons in your text that aren&rsquo;t followed by a valid parameter name then the
+colon will be treated as static text. This is handy if you&rsquo;re defining a URL pattern.
+For example: @&ldquo;<a href="http://github.com/:user">http://github.com/:user</a>&rdquo; only has one parameter, :user. The &ldquo;:&rdquo; in http://
+is treated as a string literal and not a parameter.</p>
+
+<p>Note 3: Escaping KVC characters</p>
+
+<p>If you need to use KVC characters in SOCKit patterns as literal string tokens and not
+treated with KVC then you must escape the characters using double backslashes. For example,
+@&ldquo;/:userid.json&rdquo; would create a pattern that uses KVC to access the json property of the
+username value. In this case, however, we wish to interpret the &ldquo;.json&rdquo; portion as a
+static string.</p>
+
+<p>In order to do so we must escape the &ldquo;.&rdquo; using a double backslash: &ldquo;\.&rdquo;. For example:
+@&ldquo;/:userid\.json&rdquo;. This makes it possible to create strings of the form @&ldquo;/3.json&rdquo;.
+This also works with outbound parameters, so that the string @&ldquo;/3.json&rdquo; can
+be used with the pattern to invoke a selector with &ldquo;3&rdquo; as the first argument rather
+than &ldquo;3.json&rdquo;.</p>
+
+<p>You can escape the following characters:
+&ldquo;:&rdquo; => @&ldquo;\:&rdquo;
+&ldquo;@&rdquo; => @&ldquo;\@&rdquo;
+&ldquo;.&rdquo; => @&ldquo;\.&rdquo;
+&ldquo;\&rdquo; => @&ldquo;\\&rdquo;</p>
+
+<p>Note 4: Allocating new objects with outbound patterns</p>
+
+<p>SOCKit will allocate a new object of a given class if
+performSelector:onObject:sourceString: is provided a selector with &ldquo;init&rdquo; as a prefix
+and object is a Class. E.g. [GithubUser class].</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithString:">&ndash;&nbsp;initWithString:</a></code>
+		<span class="tooltip"><p>Initializes a newly allocated pattern object with the given pattern string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/patternWithString:">+&nbsp;patternWithString:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringMatches:">&ndash;&nbsp;stringMatches:</a></code>
+		<span class="tooltip"><p>Returns YES if the given string can be used with <a href="#//api/name/performSelector:onObject:sourceString:">performSelector:onObject:sourceString:</a> or
+extractParameterKeyValuesFromSourceString:.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/performSelector:onObject:sourceString:">&ndash;&nbsp;performSelector:onObject:sourceString:</a></code>
+		<span class="tooltip"><p>Performs the given selector on the object with the matching parameter values from sourceString.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parameterDictionaryFromSourceString:">&ndash;&nbsp;parameterDictionaryFromSourceString:</a></code>
+		<span class="tooltip"><p>Extracts the matching parameter values from sourceString into an NSDictionary.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromObject:">&ndash;&nbsp;stringFromObject:</a></code>
+		<span class="tooltip"><p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringFromObject:withBlock:">&ndash;&nbsp;stringFromObject:withBlock:</a></code>
+		<span class="tooltip"><p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object, and the result is (optionally) modified or encoded by the block.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/patternWithString:" title="patternWithString:"></a>
+	<h3 class="subsubtitle method-title">patternWithString:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (id)patternWithString:(NSString *)<em>string</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithString:" title="initWithString:"></a>
+	<h3 class="subsubtitle method-title">initWithString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a newly allocated pattern object with the given pattern string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithString:(NSString *)<em>string</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes a newly allocated pattern object with the given pattern string.</p>
+
+<p>Designated initializer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parameterDictionaryFromSourceString:" title="parameterDictionaryFromSourceString:"></a>
+	<h3 class="subsubtitle method-title">parameterDictionaryFromSourceString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Extracts the matching parameter values from sourceString into an NSDictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)parameterDictionaryFromSourceString:(NSString *)<em>sourceString</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sourceString</em></dt>
+			<dd><p>A string that conforms to this pattern. The parameter values from
+this string are extracted into the NSDictionary.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A dictionary of key value pairs. All values will be NSStrings. The keys will
+correspond to the pattern&rsquo;s parameter names. Duplicate key values will be
+overwritten by later values.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Extracts the matching parameter values from sourceString into an NSDictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/performSelector:onObject:sourceString:" title="performSelector:onObject:sourceString:"></a>
+	<h3 class="subsubtitle method-title">performSelector:onObject:sourceString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs the given selector on the object with the matching parameter values from sourceString.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)performSelector:(SEL)<em>selector</em> onObject:(id)<em>object</em> sourceString:(NSString *)<em>sourceString</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd><p>The selector to perform on the object. If there aren&rsquo;t enough
+parameters in the pattern then the excess parameters in the selector
+will be nil.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The object to perform the selector on.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sourceString</em></dt>
+			<dd><p>A string that conforms to this pattern. The parameter values from
+this string are used as the arguments when performing the selector
+on the object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The initialized, autoreleased object if the selector is an initializer
+(prefixed with &ldquo;init&rdquo;) and object is a Class, otherwise the return value from
+invoking the selector.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Performs the given selector on the object with the matching parameter values from sourceString.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringFromObject:" title="stringFromObject:"></a>
+	<h3 class="subsubtitle method-title">stringFromObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringFromObject:(id)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The object whose properties will be used to replace the parameters in
+the pattern.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string with the pattern parameters replaced by the object property values.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object.</p>
+
+<p>Parameters of the pattern are evaluated using valueForKeyPath:. See Apple&rsquo;s KVC documentation
+for more details.</p>
+
+<p>Key-Value Coding Fundamentals:
+<a href="http://developer.apple.com/library/ios/">http://developer.apple.com/library/ios/</a>#documentation/cocoa/conceptual/KeyValueCoding/Articles/BasicPrinciples.html#//apple_ref/doc/uid/20002170-BAJEAIEE</p>
+
+<p>Collection Operators:
+<a href="http://developer.apple.com/library/ios/">http://developer.apple.com/library/ios/</a>#documentation/cocoa/conceptual/KeyValueCoding/Articles/CollectionOperators.html#//apple_ref/doc/uid/20002176-BAJEAIEE</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stringFromObject:withBlock:">&ndash; stringFromObject:withBlock:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringFromObject:withBlock:" title="stringFromObject:withBlock:"></a>
+	<h3 class="subsubtitle method-title">stringFromObject:withBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object, and the result is (optionally) modified or encoded by the block.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringFromObject:(id)<em>object</em> withBlock:(NSString *( ^ ) ( NSString *))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The object whose properties will be used to replace the parameters in
+the pattern.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>An optional block (may be nil) that modifies or encodes each
+property value string. The block accepts one parameter &ndash; the property
+value as a string &ndash; and should return the modified property string.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string with the pattern parameters replaced by the block-processed object
+property values.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a string with the parameters of this pattern replaced using Key-Value Coding (KVC)
+on the receiving object, and the result is (optionally) modified or encoded by the block.</p>
+
+<p>For example, consider we have individual object values that need percent escapes added to them,
+while preserving the slashes, question marks, and ampersands of a typical resource path.
+Using blocks, this is very succinct:</p>
+
+<p>@code
+NSDictionary<em> person = [NSDictionary dictionaryWithObjectsAndKeys:
+@&ldquo;SECRET|KEY&rdquo;,@&ldquo;password&rdquo;,
+@&ldquo;Joe Bob Briggs&rdquo;, @&ldquo;name&rdquo;, nil];
+SOCPattern</em> soc = [SOCPattern patternWithString:@&ldquo;/people/:name/:password&rdquo;];
+NSString<em> actualPath = [soc stringFromObject:person withBlock:^(NSString </em>)propertyValue) {
+return [propertyValue stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+NSString* expectedPath = @&ldquo;/people/Joe%20Bob%20Briggs/SECRET%7CKEY&rdquo;;
+@endcode</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stringFromObject:">&ndash; stringFromObject:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringMatches:" title="stringMatches:"></a>
+	<h3 class="subsubtitle method-title">stringMatches:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns YES if the given string can be used with <a href="#//api/name/performSelector:onObject:sourceString:">performSelector:onObject:sourceString:</a> or
+extractParameterKeyValuesFromSourceString:.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)stringMatches:(NSString *)<em>string</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>string</em></dt>
+			<dd><p>A string that may or may not conform to this pattern.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the given string conforms to this pattern, NO otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns YES if the given string can be used with <a href="#//api/name/performSelector:onObject:sourceString:">performSelector:onObject:sourceString:</a> or
+extractParameterKeyValuesFromSourceString:.</p>
+
+<p>A matching string must exactly match all of the static portions of the pattern and provide
+values for each of the parameters.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SOCKit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Jeff Verkoeyen. All rights reserved. (Last updated: 2013-01-22)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

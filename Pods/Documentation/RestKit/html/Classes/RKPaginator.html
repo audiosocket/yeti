@@ -1,0 +1,1826 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>RKPaginator Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">RestKit 0.20.0pre6 </a></h1>
+				<a id="developerHome" href="../index.html">Blake Watters</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">RKPaginator Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/URL">&nbsp;&nbsp;&nbsp;&nbsp;URL</option>
+	
+	<option value="//api/name/currentPage">&nbsp;&nbsp;&nbsp;&nbsp;currentPage</option>
+	
+	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;error</option>
+	
+	<option value="//api/name/fetchRequestBlocks">&nbsp;&nbsp;&nbsp;&nbsp;fetchRequestBlocks</option>
+	
+	<option value="//api/name/loaded">&nbsp;&nbsp;&nbsp;&nbsp;loaded</option>
+	
+	<option value="//api/name/managedObjectCache">&nbsp;&nbsp;&nbsp;&nbsp;managedObjectCache</option>
+	
+	<option value="//api/name/managedObjectContext">&nbsp;&nbsp;&nbsp;&nbsp;managedObjectContext</option>
+	
+	<option value="//api/name/mappingResult">&nbsp;&nbsp;&nbsp;&nbsp;mappingResult</option>
+	
+	<option value="//api/name/objectCount">&nbsp;&nbsp;&nbsp;&nbsp;objectCount</option>
+	
+	<option value="//api/name/operationQueue">&nbsp;&nbsp;&nbsp;&nbsp;operationQueue</option>
+	
+	<option value="//api/name/pageCount">&nbsp;&nbsp;&nbsp;&nbsp;pageCount</option>
+	
+	<option value="//api/name/paginationMapping">&nbsp;&nbsp;&nbsp;&nbsp;paginationMapping</option>
+	
+	<option value="//api/name/patternURL">&nbsp;&nbsp;&nbsp;&nbsp;patternURL</option>
+	
+	<option value="//api/name/perPage">&nbsp;&nbsp;&nbsp;&nbsp;perPage</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
+	
+	<option value="//api/name/hasNextPage">&nbsp;&nbsp;&nbsp;&nbsp;- hasNextPage</option>
+	
+	<option value="//api/name/hasObjectCount">&nbsp;&nbsp;&nbsp;&nbsp;- hasObjectCount</option>
+	
+	<option value="//api/name/hasPageCount">&nbsp;&nbsp;&nbsp;&nbsp;- hasPageCount</option>
+	
+	<option value="//api/name/hasPreviousPage">&nbsp;&nbsp;&nbsp;&nbsp;- hasPreviousPage</option>
+	
+	<option value="//api/name/initWithRequest:paginationMapping:responseDescriptors:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithRequest:paginationMapping:responseDescriptors:</option>
+	
+	<option value="//api/name/loadNextPage">&nbsp;&nbsp;&nbsp;&nbsp;- loadNextPage</option>
+	
+	<option value="//api/name/loadPage:">&nbsp;&nbsp;&nbsp;&nbsp;- loadPage:</option>
+	
+	<option value="//api/name/loadPreviousPage">&nbsp;&nbsp;&nbsp;&nbsp;- loadPreviousPage</option>
+	
+	<option value="//api/name/setCompletionBlockWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- setCompletionBlockWithSuccess:failure:</option>
+	
+	<option value="//api/name/setHTTPOperationClass:">&nbsp;&nbsp;&nbsp;&nbsp;- setHTTPOperationClass:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializing Paginator Objects">Initializing Paginator Objects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring Networking">Configuring Networking</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting the Completion Block">Setting the Completion Block</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Pagination Results">Accessing Pagination Results</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Object Mapping Configuration">Object Mapping Configuration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Core Data Configuration">Core Data Configuration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Pagination Metadata">Accessing Pagination Metadata</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Paginator Actions">Paginator Actions</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URL">URL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentPage">currentPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchRequestBlocks">fetchRequestBlocks</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loaded">loaded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/managedObjectCache">managedObjectCache</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/managedObjectContext">managedObjectContext</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mappingResult">mappingResult</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectCount">objectCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/operationQueue">operationQueue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pageCount">pageCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/paginationMapping">paginationMapping</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/patternURL">patternURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/perPage">perPage</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasNextPage">hasNextPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasObjectCount">hasObjectCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasPageCount">hasPageCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasPreviousPage">hasPreviousPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithRequest:paginationMapping:responseDescriptors:">initWithRequest:paginationMapping:responseDescriptors:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadNextPage">loadNextPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadPage:">loadPage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadPreviousPage">loadPreviousPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCompletionBlockWithSuccess:failure:">setCompletionBlockWithSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setHTTPOperationClass:">setHTTPOperationClass:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="RKPaginator Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">RKPaginator Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">RKPaginator.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Instances of <code>RKPaginator</code> retrieve paginated collections of mappable data from remote systems via HTTP. Paginators perform GET requests and use a patterned <a href="#//api/name/URL">URL</a> to construct a full <a href="#//api/name/URL">URL</a> reflecting the state of the paginator. Paginators rely on an instance of RKObjectMappingProvider to determine how to perform object mapping on the retrieved data. Paginators can load Core Data backed models provided that an instance of <a href="../Classes/RKManagedObjectStore.html">RKManagedObjectStore</a> is assigned to the paginator.</p>
+
+<h2>Configuring Pagination Mapping</h2>
+
+<p>The paginator must be configured with a <a href="#//api/name/paginationMapping"><code>paginationMapping</code></a> specifying how configuration metadata is to be mapped out of the response payload. The configured mapping must have an <code>objectClass</code> of <code>RKPaginator</code> and should include attribute mappings for the <a href="#//api/name/currentPage"><code>currentPage</code></a>, <a href="#//api/name/pageCount"><code>pageCount</code></a>, <a href="#//api/name/perPage"><code>perPage</code></a>, and <a href="#//api/name/objectCount"><code>objectCount</code></a>. For example, given a paginated resource <a href="#//api/name/loaded">loaded</a> from &lsquo;/articles?page=1&rsquo; with the followibg JSON:</p>
+
+<pre><code>{ "pagination": { "per_page": 10, "total_pages": 25, "total_objects": 250 }, "articles": [ // Array of articles ] }
+</code></pre>
+
+<p>The pagination mapping would be configured as:</p>
+
+<pre><code>RKObjectMapping *paginationMapping = [RKObjectMapping mappingForClass:[RKPaginator class]];
+[paginationMapping addAttributeMappingsFromDictionary:@{
+    @"pagination.per_page":        @"perPage",
+    @"pagination.total_pages":     @"pageCount",
+    @"pagination.total_objects":   @"objectCount",
+}];
+</code></pre>
+
+<h2>iOS 5 Compatibility Caveats</h2>
+
+<p>The paginator is compatible with iOS 5.x through the use of proxy attributes. In iOS 6.0 and greater, key-value coding supports the automatic boxing and unboxing of primitive values. This enables direct mapping configuration for the <a href="#//api/name/currentPage"><code>currentPage</code></a>, <a href="#//api/name/pageCount"><code>pageCount</code></a>, <a href="#//api/name/perPage"><code>perPage</code></a>, and <a href="#//api/name/objectCount"><code>objectCount</code></a> attributes. Under iOS 5, where autoboxing is not available, mapping configuration must target special proxy attributes instead. For each of the above properties, a private <code>NSNumber</code> property is implemented by the class. Each proxy property has &lsquo;Number&rsquo; appended as a suffix to the property name: <code>currentPageNumber</code>, <code>pageCountNumber</code>, <code>perPageNumber</code>, and <code>objectCountNumber</code>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Initializing Paginator Objects" name="task_Initializing Paginator Objects"></a>
+						<h3 class="subsubtitle task-title">Initializing Paginator Objects</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithRequest:paginationMapping:responseDescriptors:">&ndash;&nbsp;initWithRequest:paginationMapping:responseDescriptors:</a></code>
+		<span class="tooltip"><p>Initializes a RKPaginator object with the a provided <a href="#//api/name/patternURL">patternURL</a> and mappingProvider.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Configuring Networking" name="task_Configuring Networking"></a>
+						<h3 class="subsubtitle task-title">Configuring Networking</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/patternURL">&nbsp;&nbsp;patternURL</a></code>
+		<span class="tooltip"><p>A <a href="#//api/name/URL">URL</a> with a path pattern for building a complete <a href="#//api/name/URL">URL</a> from
+which to load the paginated resource collection. The patterned resource
+path will be evaluated against the state of the paginator object itself.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/URL">&nbsp;&nbsp;URL</a></code>
+		<span class="tooltip"><p>Returns a complete URL to the paginated resource collection by interpolating the state of the paginator object against the <a href="#//api/name/patternURL">patternURL</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/operationQueue">&nbsp;&nbsp;operationQueue</a></code>
+		<span class="tooltip"><p>An optional operation queue on which object request operations constructed by the paginator are to be enqueued for processing.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setHTTPOperationClass:">&ndash;&nbsp;setHTTPOperationClass:</a></code>
+		<span class="tooltip"><p>Sets the <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> subclass to be used when constructing HTTP request operations for requests dispatched by the paginator.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Setting the Completion Block" name="task_Setting the Completion Block"></a>
+						<h3 class="subsubtitle task-title">Setting the Completion Block</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCompletionBlockWithSuccess:failure:">&ndash;&nbsp;setCompletionBlockWithSuccess:failure:</a></code>
+		<span class="tooltip"><p>Sets the completion block to be invoked when the paginator finishes loading a page of results.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Pagination Results" name="task_Accessing Pagination Results"></a>
+						<h3 class="subsubtitle task-title">Accessing Pagination Results</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mappingResult">&nbsp;&nbsp;mappingResult</a></code>
+		<span class="tooltip"><p>The mapping result containing the last set of paginated objects or <code>nil</code> if an <a href="#//api/name/error">error</a> was encountered.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+		<span class="tooltip"><p>The error, if any, that occured during the last load of the paginator.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Object Mapping Configuration" name="task_Object Mapping Configuration"></a>
+						<h3 class="subsubtitle task-title">Object Mapping Configuration</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/paginationMapping">&nbsp;&nbsp;paginationMapping</a></code>
+		<span class="tooltip"><p>The object mapping defining how pagination metadata is to be mapped from a paginated response onto the paginator object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Core Data Configuration" name="task_Core Data Configuration"></a>
+						<h3 class="subsubtitle task-title">Core Data Configuration</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/managedObjectContext">&nbsp;&nbsp;managedObjectContext</a></code>
+		<span class="tooltip"><p>The managed object context in which paginated managed objects are to be persisted.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/managedObjectCache">&nbsp;&nbsp;managedObjectCache</a></code>
+		<span class="tooltip"><p>The managed object cache used to find existing managed object instances in the persistent store.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchRequestBlocks">&nbsp;&nbsp;fetchRequestBlocks</a></code>
+		<span class="tooltip"><p>An array of fetch request blocks.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Pagination Metadata" name="task_Accessing Pagination Metadata"></a>
+						<h3 class="subsubtitle task-title">Accessing Pagination Metadata</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/perPage">&nbsp;&nbsp;perPage</a></code>
+		<span class="tooltip"><p>The number of objects to load per page</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loaded">&nbsp;&nbsp;loaded</a></code>
+		<span class="tooltip"><p>A Boolean value indicating if the paginator has loaded a page of objects</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentPage">&nbsp;&nbsp;currentPage</a></code>
+		<span class="tooltip"><p>Returns the page number for the most recently <a href="#//api/name/loaded">loaded</a> page of objects.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pageCount">&nbsp;&nbsp;pageCount</a></code>
+		<span class="tooltip"><p>Returns the number of pages in the total resource collection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectCount">&nbsp;&nbsp;objectCount</a></code>
+		<span class="tooltip"><p>Returns the total number of objects in the collection</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasPageCount">&ndash;&nbsp;hasPageCount</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if the total number of pages in the collection is known by the paginator.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasObjectCount">&ndash;&nbsp;hasObjectCount</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if the total number of objects in the collection is known by the paginator.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasNextPage">&ndash;&nbsp;hasNextPage</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if there is a next page in the collection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasPreviousPage">&ndash;&nbsp;hasPreviousPage</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if there is a previous page in the collection.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Paginator Actions" name="task_Paginator Actions"></a>
+						<h3 class="subsubtitle task-title">Paginator Actions</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadNextPage">&ndash;&nbsp;loadNextPage</a></code>
+		<span class="tooltip"><p>Loads the next page of data by incrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadPreviousPage">&ndash;&nbsp;loadPreviousPage</a></code>
+		<span class="tooltip"><p>Loads the previous page of data by decrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadPage:">&ndash;&nbsp;loadPage:</a></code>
+		<span class="tooltip"><p>Loads a specific page of data by mutating the current page, constructing an object loader to fetch the data, and object mapping the results.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+		<span class="tooltip"><p>Cancels an in-progress pagination request.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/URL" title="URL"></a>
+	<h3 class="subsubtitle method-title">URL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a complete URL to the paginated resource collection by interpolating the state of the paginator object against the <a href="#//api/name/patternURL">patternURL</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSURL *URL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a complete URL to the paginated resource collection by interpolating the state of the paginator object against the <a href="#//api/name/patternURL">patternURL</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/currentPage" title="currentPage"></a>
+	<h3 class="subsubtitle method-title">currentPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the page number for the most recently <a href="#//api/name/loaded">loaded</a> page of objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger currentPage</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The page number for the current page of objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the page number for the most recently <a href="#//api/name/loaded">loaded</a> page of objects.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if <a href="#//api/name/loaded"><code>isLoaded</code></a> is equal to <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="subsubtitle method-title">error</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The error, if any, that occured during the last load of the paginator.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSError *error</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The error, if any, that occured during the last load of the paginator.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchRequestBlocks" title="fetchRequestBlocks"></a>
+	<h3 class="subsubtitle method-title">fetchRequestBlocks</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An array of fetch request blocks.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *fetchRequestBlocks</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An array of fetch request blocks.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loaded" title="loaded"></a>
+	<h3 class="subsubtitle method-title">loaded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value indicating if the paginator has loaded a page of objects</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoaded) BOOL loaded</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES when the paginator has loaded a page of objects</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value indicating if the paginator has loaded a page of objects</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/managedObjectCache" title="managedObjectCache"></a>
+	<h3 class="subsubtitle method-title">managedObjectCache</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The managed object cache used to find existing managed object instances in the persistent store.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;RKManagedObjectCaching&gt; managedObjectCache</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The managed object cache used to find existing managed object instances in the persistent store.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/managedObjectContext" title="managedObjectContext"></a>
+	<h3 class="subsubtitle method-title">managedObjectContext</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The managed object context in which paginated managed objects are to be persisted.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The managed object context in which paginated managed objects are to be persisted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mappingResult" title="mappingResult"></a>
+	<h3 class="subsubtitle method-title">mappingResult</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The mapping result containing the last set of paginated objects or <code>nil</code> if an <a href="#//api/name/error">error</a> was encountered.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKMappingResult *mappingResult</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The mapping result containing the last set of paginated objects or <code>nil</code> if an <a href="#//api/name/error">error</a> was encountered.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectCount" title="objectCount"></a>
+	<h3 class="subsubtitle method-title">objectCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the total number of objects in the collection</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger objectCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A count of the number of objects in the resource collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the total number of objects in the collection</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if <a href="#//api/name/hasObjectCount"><code>hasObjectCount</code></a> is <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/operationQueue" title="operationQueue"></a>
+	<h3 class="subsubtitle method-title">operationQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An optional operation queue on which object request operations constructed by the paginator are to be enqueued for processing.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSOperationQueue *operationQueue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An optional operation queue on which object request operations constructed by the paginator are to be enqueued for processing.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pageCount" title="pageCount"></a>
+	<h3 class="subsubtitle method-title">pageCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the number of pages in the total resource collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger pageCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A count of the number of pages in the resource collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the number of pages in the total resource collection.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if <a href="#//api/name/hasPageCount"><code>hasPageCount</code></a> is <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/paginationMapping" title="paginationMapping"></a>
+	<h3 class="subsubtitle method-title">paginationMapping</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The object mapping defining how pagination metadata is to be mapped from a paginated response onto the paginator object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) RKObjectMapping *paginationMapping</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The object mapping defining how pagination metadata is to be mapped from a paginated response onto the paginator object.</p>
+
+<p>See the documentation in the &ldquo;Configuring Pagination Mapping&rdquo; section for details about the pagination mapping.</p><div class="warning"><p><strong>Warning:</strong> The <code>objectClass</code> of the given mapping must be <code>RKPaginator</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/patternURL" title="patternURL"></a>
+	<h3 class="subsubtitle method-title">patternURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A <a href="#//api/name/URL">URL</a> with a path pattern for building a complete <a href="#//api/name/URL">URL</a> from
+which to load the paginated resource collection. The patterned resource
+path will be evaluated against the state of the paginator object itself.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSURL *patternURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A <a href="#//api/name/URL">URL</a> with a path pattern for building a complete <a href="#//api/name/URL">URL</a> from
+which to load the paginated resource collection. The patterned resource
+path will be evaluated against the state of the paginator object itself.</p>
+
+<p>For example, given a paginated collection of data at the /articles path,
+the path portion of the pattern <a href="#//api/name/URL">URL</a> may look like:</p>
+
+<p>/articles?per_page=:perPage&amp;page_number=:<a href="#//api/name/currentPage">currentPage</a></p>
+
+<p>When the pattern is evaluated against the state of the paginator, this will
+yield a complete path that can be used to load the specified page. Given
+a paginator configured with 100 objects per page and a current page number of 3,
+the path portion of the pagination <a href="#//api/name/URL">URL</a> would become:</p>
+
+<p>/articles?per_page=100&amp;page_number=3</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/perPage" title="perPage"></a>
+	<h3 class="subsubtitle method-title">perPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of objects to load per page</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger perPage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of objects to load per page</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="subsubtitle method-title">cancel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancels an in-progress pagination request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Cancels an in-progress pagination request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasNextPage" title="hasNextPage"></a>
+	<h3 class="subsubtitle method-title">hasNextPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if there is a next page in the collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasNextPage</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if there is a next page, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if there is a next page in the collection.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if <a href="#//api/name/loaded">isLoaded</a> or <a href="#//api/name/hasPageCount">hasPageCount</a> is <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasObjectCount" title="hasObjectCount"></a>
+	<h3 class="subsubtitle method-title">hasObjectCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if the total number of objects in the collection is known by the paginator.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasObjectCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the paginator knows the number of objects in the paginated collection, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if the total number of objects in the collection is known by the paginator.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasPageCount" title="hasPageCount"></a>
+	<h3 class="subsubtitle method-title">hasPageCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if the total number of pages in the collection is known by the paginator.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasPageCount</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the paginator knows the page count, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if the total number of pages in the collection is known by the paginator.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasPreviousPage" title="hasPreviousPage"></a>
+	<h3 class="subsubtitle method-title">hasPreviousPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if there is a previous page in the collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasPreviousPage</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if there is a previous page, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if there is a previous page in the collection.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if <a href="#//api/name/loaded">isLoaded</a> is <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithRequest:paginationMapping:responseDescriptors:" title="initWithRequest:paginationMapping:responseDescriptors:"></a>
+	<h3 class="subsubtitle method-title">initWithRequest:paginationMapping:responseDescriptors:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a RKPaginator object with the a provided <a href="#//api/name/patternURL">patternURL</a> and mappingProvider.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithRequest:(NSURLRequest *)<em>request</em> paginationMapping:(RKObjectMapping *)<em>paginationMapping</em> responseDescriptors:(NSArray *)<em>responseDescriptors</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>request</em></dt>
+			<dd><p>A request with a <a href="#//api/name/URL">URL</a> containing a dynamic pattern specifying how paginated resources are to be acessed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>paginationMapping</em></dt>
+			<dd><p>The pagination mapping specifying how pagination metadata is to be mapped from responses.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>responseDescriptors</em></dt>
+			<dd><p>An array of response descriptors describing how to map object representations <a href="#//api/name/loaded">loaded</a> by object request operations dispatched by the paginator.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver, initialized with the request, pagination mapping, and response descriptors.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes a RKPaginator object with the a provided <a href="#//api/name/patternURL">patternURL</a> and mappingProvider.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadNextPage" title="loadNextPage"></a>
+	<h3 class="subsubtitle method-title">loadNextPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the next page of data by incrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadNextPage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Loads the next page of data by incrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadPage:" title="loadPage:"></a>
+	<h3 class="subsubtitle method-title">loadPage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads a specific page of data by mutating the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadPage:(NSUInteger)<em>pageNumber</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pageNumber</em></dt>
+			<dd><p>The page of objects to load from the remote backend</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Loads a specific page of data by mutating the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadPreviousPage" title="loadPreviousPage"></a>
+	<h3 class="subsubtitle method-title">loadPreviousPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the previous page of data by decrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadPreviousPage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Loads the previous page of data by decrementing the current page, constructing an object loader to fetch the data, and object mapping the results.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setCompletionBlockWithSuccess:failure:" title="setCompletionBlockWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">setCompletionBlockWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the completion block to be invoked when the paginator finishes loading a page of results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setCompletionBlockWithSuccess:(void ( ^ ) ( RKPaginator *paginator , NSArray *objects , NSUInteger page ))<em>success</em> failure:(void ( ^ ) ( RKPaginator *paginator , NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>A block to be executed upon a successful load of a page of objects. The block has no return value and takes three arguments: the paginator object, an array containing the paginated objects, and an integer indicating the page that was <a href="#//api/name/loaded">loaded</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>A block to be exected upon a failed load. The block has no return value and takes two arguments: the paginator object and an <a href="#//api/name/error">error</a> indicating the nature of the failure.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the completion block to be invoked when the paginator finishes loading a page of results.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setHTTPOperationClass:" title="setHTTPOperationClass:"></a>
+	<h3 class="subsubtitle method-title">setHTTPOperationClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> subclass to be used when constructing HTTP request operations for requests dispatched by the paginator.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setHTTPOperationClass:(Class)<em>operationClass</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> subclass to be used when constructing HTTP request operations for requests dispatched by the paginator.</p>
+
+<p><strong>Default</strong>: <code>[RKHTTPRequestOperation class]</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Blake Watters. All rights reserved. (Last updated: 2013-01-22)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

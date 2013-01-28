@@ -1,0 +1,935 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>RKConnectionDescription Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">RestKit 0.20.0pre6 </a></h1>
+				<a id="developerHome" href="../index.html">Blake Watters</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">RKConnectionDescription Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/attributes">&nbsp;&nbsp;&nbsp;&nbsp;attributes</option>
+	
+	<option value="//api/name/destinationPredicate">&nbsp;&nbsp;&nbsp;&nbsp;destinationPredicate</option>
+	
+	<option value="//api/name/includesSubentities">&nbsp;&nbsp;&nbsp;&nbsp;includesSubentities</option>
+	
+	<option value="//api/name/keyPath">&nbsp;&nbsp;&nbsp;&nbsp;keyPath</option>
+	
+	<option value="//api/name/relationship">&nbsp;&nbsp;&nbsp;&nbsp;relationship</option>
+	
+	<option value="//api/name/sourcePredicate">&nbsp;&nbsp;&nbsp;&nbsp;sourcePredicate</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithRelationship:attributes:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithRelationship:attributes:</option>
+	
+	<option value="//api/name/initWithRelationship:keyPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithRelationship:keyPath:</option>
+	
+	<option value="//api/name/isForeignKeyConnection">&nbsp;&nbsp;&nbsp;&nbsp;- isForeignKeyConnection</option>
+	
+	<option value="//api/name/isKeyPathConnection">&nbsp;&nbsp;&nbsp;&nbsp;- isKeyPathConnection</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connecting Relationships by Foreign Keys">Connecting Relationships by Foreign Keys</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connecting Relationships by Key Path">Connecting Relationships by Key Path</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Relationship to be Connected">Accessing the Relationship to be Connected</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting the Predicate">Setting the Predicate</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributes">attributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destinationPredicate">destinationPredicate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/includesSubentities">includesSubentities</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keyPath">keyPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/relationship">relationship</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sourcePredicate">sourcePredicate</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithRelationship:attributes:">initWithRelationship:attributes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithRelationship:keyPath:">initWithRelationship:keyPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isForeignKeyConnection">isForeignKeyConnection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isKeyPathConnection">isKeyPathConnection</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="RKConnectionDescription Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">RKConnectionDescription Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSCopying</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">RKConnectionDescription.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>RKConnectionDescription</code> class describes a means for connecting a Core Data <a href="#//api/name/relationship">relationship</a>. Connections can be established either by foreign key, in which case one or more attribute values on the source entity correspond to matching values on the destination entity, or by key path, in which case a key path is evaluated on the object graph to obtain a value for the <a href="#//api/name/relationship">relationship</a>. Connection objects are used by instances of <a href="../Classes/RKRelationshipConnectionOperation.html"><code>RKRelationshipConnectionOperation</code></a> to connect a <a href="#//api/name/relationship">relationship</a> of a given managed object.</p>
+
+<h2>Foreign Key Connections</h2>
+
+<p>A foreign key connection is established by identifying managed objects within a context which have corresponding values on the source and destination objects. This is typically used to model relationships in the same way one would within a relational database.</p>
+
+<p>For example, consider the example of a <code>User</code> entity that has a to-many <a href="#//api/name/relationship">relationship</a> named &lsquo;projects&rsquo; for the <code>Project</code> entity. Within the <code>User</code> entity, there is an attribute named &lsquo;userID&rsquo; that models the value for a given user&rsquo;s primary key as provided to the application by the remote backend API with which it is communicating. Within the <code>Project</code> entity, a corresponding &lsquo;userID&rsquo; attribute exists specifying the value of the primary key for the <code>User</code> that owns the project. The applications loads each of these object representations independently from the &lsquo;/me/profile&rsquo; and &lsquo;/projects&rsquo; resources. The JSON representation returned for a given <code>Project</code> entity looks something like:</p>
+
+<pre><code>{ "project": 
+    { "id": 12345, 
+      "name": "My Project",
+      "userID": 1
+    }
+}
+</code></pre>
+
+<p>When this representation is mapped to a managed object for the <code>Project</code> entity, the &lsquo;user&rsquo; <a href="#//api/name/relationship">relationship</a> cannot be mapped directly because there is no nested representation &mdash; only the primary key is available. In this case, the <a href="#//api/name/relationship">relationship</a> can be connected by describing the association between the entities with an <code>RKConnectionDescription</code> object:</p>
+
+<pre><code>NSEntityDescription *projectEntity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:managedObjectContext];
+NSRelationshipDescription *userRelationship = [projectEntity relationshipsByName][@"user"];
+RKConnectionDescription *connection = [[RKConnectionDescription alloc] initWithRelationship:relationship attributes:@{ @"userID": @"userID" }];
+</code></pre>
+
+<p>Note that the value for the <code>attributes</code> argument is provided as a dictionary. Each pair within the dictionary correspond to an attribute pair in which the key is an attribute on the source entity (in this case, the <code>Project</code>) and the value is the destination entity (in this case, the <code>User</code>).</p>
+
+<p>Any number of attribute pairs may be specified, but all values must match for the connection to be satisfied and the relationship&rsquo;s value to be set.</p>
+
+<h3>Connecting with Collection Values</h3>
+
+<p>Connections can be established by a collection of values. For example, imagine that the previously described project representation has been extended to include a list of team members who are working on the project:</p>
+
+<pre><code> { "project":
+    {   "id": 12345,
+        "name": "My Project",
+        "userID": 1,
+        "teamMemberIDs": [1, 2, 3, 4]
+    }
+ }
+</code></pre>
+
+<p>The &lsquo;teamMemberIDs&rsquo; contains an array specifying the ID&rsquo;s of the <code>User</code> objects who are collaborating on the project, which corresponds to a to-many <a href="#//api/name/relationship">relationship</a> named &lsquo;teamMembers&rsquo; on the <code>Project</code> entity. In this case, the &lsquo;teamMemberIDs&rsquo; could be mapped on to an <code>NSArray</code> or <code>NSSet</code> property on the <code>Project</code> entity and then connected:</p>
+
+<pre><code> NSEntityDescription *projectEntity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:managedObjectContext];
+ NSRelationshipDescription *teamMembers = [projectEntity relationshipsByName][@"teamMembers"]; // To many relationship for the `User` entity
+ RKConnectionDescription *connection = [[RKConnectionDescription alloc] initWithRelationship:relationship attributes:@{ @"teamMemberIDs": @"userID" }];
+</code></pre>
+
+<p>When evaluating the above JSON, the connection would be established for the &lsquo;teamMembers&rsquo; <a href="#//api/name/relationship">relationship</a> to the <code>User</code> entities whose userID&rsquo;s are 1, 2, 3 or 4.</p>
+
+<p>Note that collections of attribute values are always interpetted as logic OR&rsquo;s, but compound connections are aggregated as a logical AND. For example, if we were to add a second connecting attribute for the &ldquo;gender&rdquo; property and include <code>"gender": "male"</code> in the JSON, the connection would be made to all <code>User</code> managed objects whose ID is 1, 2, 3, OR 4 AND whose gender is &ldquo;male&rdquo;.</p>
+
+<h2>Key Path Connections</h2>
+
+<p>A key path connection is established by evaluating the key path of the connection against the managed object being connected. The returned value has type transformation applied and is then assigned to the <a href="#//api/name/relationship">relationship</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Connecting Relationships by Foreign Keys" name="task_Connecting Relationships by Foreign Keys"></a>
+						<h3 class="subsubtitle task-title">Connecting Relationships by Foreign Keys</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithRelationship:attributes:">&ndash;&nbsp;initWithRelationship:attributes:</a></code>
+		<span class="tooltip"><p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and a dictionary of <a href="#//api/name/attributes">attributes</a> specifying how to connect the <a href="#//api/name/relationship">relationship</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+		<span class="tooltip"><p>The dictionary of attributes specifying how attributes on the source entity for the <a href="#//api/name/relationship">relationship</a> correspond to attributes on the destination entity.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isForeignKeyConnection">&ndash;&nbsp;isForeignKeyConnection</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if the receiver describes a foreign key connection.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Connecting Relationships by Key Path" name="task_Connecting Relationships by Key Path"></a>
+						<h3 class="subsubtitle task-title">Connecting Relationships by Key Path</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithRelationship:keyPath:">&ndash;&nbsp;initWithRelationship:keyPath:</a></code>
+		<span class="tooltip"><p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and key path.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keyPath">&nbsp;&nbsp;keyPath</a></code>
+		<span class="tooltip"><p>The key path that is to be evaluated to obtain the value for the <a href="#//api/name/relationship">relationship</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isKeyPathConnection">&ndash;&nbsp;isKeyPathConnection</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if the receiver describes a key path connection.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing the Relationship to be Connected" name="task_Accessing the Relationship to be Connected"></a>
+						<h3 class="subsubtitle task-title">Accessing the Relationship to be Connected</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/relationship">&nbsp;&nbsp;relationship</a></code>
+		<span class="tooltip"><p>Returns the relationship that is to be connected.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Setting the Predicate" name="task_Setting the Predicate"></a>
+						<h3 class="subsubtitle task-title">Setting the Predicate</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/includesSubentities">&nbsp;&nbsp;includesSubentities</a></code>
+		<span class="tooltip"><p>Returns a Boolean value that determines if the connection includes subentities. If <code>NO</code>, then the connection will only be established to objects of exactly the entity specified by the relationship&rsquo;s entity. If <code>YES</code>, then the connection will be established to all objects of the relationship&rsquo;s entity and all subentities.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sourcePredicate">&nbsp;&nbsp;sourcePredicate</a></code>
+		<span class="tooltip"><p>An optional predicate for conditionally evaluating the connection based on the state of the source object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destinationPredicate">&nbsp;&nbsp;destinationPredicate</a></code>
+		<span class="tooltip"><p>An optional predicate for filtering objects to be connected.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="subsubtitle method-title">attributes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The dictionary of attributes specifying how attributes on the source entity for the <a href="#//api/name/relationship">relationship</a> correspond to attributes on the destination entity.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSDictionary *attributes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The dictionary of attributes specifying how attributes on the source entity for the <a href="#//api/name/relationship">relationship</a> correspond to attributes on the destination entity.</p>
+
+<p>This attribute is <code>nil</code> unless the value of <a href="#//api/name/isForeignKeyConnection"><code>isForeignKeyConnection</code></a> is <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destinationPredicate" title="destinationPredicate"></a>
+	<h3 class="subsubtitle method-title">destinationPredicate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An optional predicate for filtering objects to be connected.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSPredicate *destinationPredicate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An optional predicate for filtering objects to be connected.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/includesSubentities" title="includesSubentities"></a>
+	<h3 class="subsubtitle method-title">includesSubentities</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value that determines if the connection includes subentities. If <code>NO</code>, then the connection will only be established to objects of exactly the entity specified by the relationship&rsquo;s entity. If <code>YES</code>, then the connection will be established to all objects of the relationship&rsquo;s entity and all subentities.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL includesSubentities</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value that determines if the connection includes subentities. If <code>NO</code>, then the connection will only be established to objects of exactly the entity specified by the relationship&rsquo;s entity. If <code>YES</code>, then the connection will be established to all objects of the relationship&rsquo;s entity and all subentities.</p>
+
+<p><strong>Default</strong>: <code>YES</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keyPath" title="keyPath"></a>
+	<h3 class="subsubtitle method-title">keyPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The key path that is to be evaluated to obtain the value for the <a href="#//api/name/relationship">relationship</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *keyPath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The key path that is to be evaluated to obtain the value for the <a href="#//api/name/relationship">relationship</a>.</p>
+
+<p>This attribute is <code>nil</code> unless the value of <a href="#//api/name/isKeyPathConnection"><code>isKeyPathConnection</code></a> is <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/relationship" title="relationship"></a>
+	<h3 class="subsubtitle method-title">relationship</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the relationship that is to be connected.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSRelationshipDescription *relationship</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the relationship that is to be connected.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sourcePredicate" title="sourcePredicate"></a>
+	<h3 class="subsubtitle method-title">sourcePredicate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An optional predicate for conditionally evaluating the connection based on the state of the source object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSPredicate *sourcePredicate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An optional predicate for conditionally evaluating the connection based on the state of the source object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithRelationship:attributes:" title="initWithRelationship:attributes:"></a>
+	<h3 class="subsubtitle method-title">initWithRelationship:attributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and a dictionary of <a href="#//api/name/attributes">attributes</a> specifying how to connect the <a href="#//api/name/relationship">relationship</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithRelationship:(NSRelationshipDescription *)<em>relationship</em> attributes:(NSDictionary *)<em>sourceToDestinationEntityAttributes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>relationship</em></dt>
+			<dd><p>The <a href="#//api/name/relationship">relationship</a> to be connected.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sourceToDestinationEntityAttributes</em></dt>
+			<dd><p>A dictionary specifying how <a href="#//api/name/attributes">attributes</a> on the source entity correspond to <a href="#//api/name/attributes">attributes</a> on the destination entity.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver, initialized with the given <a href="#//api/name/relationship">relationship</a> and <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and a dictionary of <a href="#//api/name/attributes">attributes</a> specifying how to connect the <a href="#//api/name/relationship">relationship</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithRelationship:keyPath:" title="initWithRelationship:keyPath:"></a>
+	<h3 class="subsubtitle method-title">initWithRelationship:keyPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and key path.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithRelationship:(NSRelationshipDescription *)<em>relationship</em> keyPath:(NSString *)<em>keyPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>relationship</em></dt>
+			<dd><p>The <a href="#//api/name/relationship">relationship</a> to be connected.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyPath</em></dt>
+			<dd><p>The key path from which to read the value that is to be set for the <a href="#//api/name/relationship">relationship</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver, initialized with the given <a href="#//api/name/relationship">relationship</a> and key path.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes the receiver with a given <a href="#//api/name/relationship">relationship</a> and key path.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isForeignKeyConnection" title="isForeignKeyConnection"></a>
+	<h3 class="subsubtitle method-title">isForeignKeyConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if the receiver describes a foreign key connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isForeignKeyConnection</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the receiver describes a foreign key connection, else <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if the receiver describes a foreign key connection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isKeyPathConnection" title="isKeyPathConnection"></a>
+	<h3 class="subsubtitle method-title">isKeyPathConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if the receiver describes a key path connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isKeyPathConnection</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the receiver describes a key path connection, else <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a Boolean value indicating if the receiver describes a key path connection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKConnectionDescription.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Blake Watters. All rights reserved. (Last updated: 2013-01-22)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

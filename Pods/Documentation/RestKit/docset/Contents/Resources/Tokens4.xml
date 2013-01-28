@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKDateToStringValueTransformer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKDateToStringValueTransformer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDateToStringValueTransformer/setDateToStringFormatter:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSFormatter *dateToStringFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/dateToStringFormatter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKDateToStringValueTransformer/dateToStringFormatter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSFormatter *dateToStringFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/dateToStringFormatter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDateToStringValueTransformer/setStringToDateFormatters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *stringToDateFormatters</Declaration>
+			
+			
+			<Anchor>//api/name/stringToDateFormatters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKDateToStringValueTransformer/stringToDateFormatters</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSArray *stringToDateFormatters</Declaration>
+			
+			
+			<Anchor>//api/name/stringToDateFormatters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDateToStringValueTransformer/initWithDateToStringFormatter:stringToDateFormatters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDateToStringFormatter:(NSFormatter *)dateToStringFormatter stringToDateFormatters:(NSArray *)stringToDateFormatters</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDateToStringFormatter:stringToDateFormatters:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

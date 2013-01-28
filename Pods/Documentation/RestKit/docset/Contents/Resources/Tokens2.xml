@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKConnectionDescription.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKConnectionDescription</TokenIdentifier>
+			<Abstract type="html">The RKConnectionDescription class describes a means for connecting a Core Data relationship. Connections can be established either by foreign key, in which case one or more attribute values on the source entity correspond to matching values on the destination entity, or by key path, in which case a key path is evaluated on the object graph to obtain a value for the relationship. Connection objects are used by instances of RKRelationshipConnectionOperation to connect a relationship of a given managed object.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/initWithRelationship:attributes:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with a given relationship and a dictionary of attributes specifying how to connect the relationship.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRelationship:(NSRelationshipDescription *)relationship attributes:(NSDictionary *)sourceToDestinationEntityAttributes</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>relationship</Name>
+					<Abstract type="html">The relationship to be connected.</Abstract>
+				</Parameter><Parameter>
+					<Name>sourceToDestinationEntityAttributes</Name>
+					<Abstract type="html">A dictionary specifying how attributes on the source entity correspond to attributes on the destination entity.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver, initialized with the given relationship and attributes.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithRelationship:attributes:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setAttributes:</TokenIdentifier>
+			<Abstract type="html">The dictionary of attributes specifying how attributes on the source entity for the relationship correspond to attributes on the destination entity.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/attributes</TokenIdentifier>
+			<Abstract type="html">The dictionary of attributes specifying how attributes on the source entity for the relationship correspond to attributes on the destination entity.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/isForeignKeyConnection</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value indicating if the receiver describes a foreign key connection.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isForeignKeyConnection</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver describes a foreign key connection, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isForeignKeyConnection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/initWithRelationship:keyPath:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with a given relationship and key path.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRelationship:(NSRelationshipDescription *)relationship keyPath:(NSString *)keyPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>relationship</Name>
+					<Abstract type="html">The relationship to be connected.</Abstract>
+				</Parameter><Parameter>
+					<Name>keyPath</Name>
+					<Abstract type="html">The key path from which to read the value that is to be set for the relationship.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver, initialized with the given relationship and key path.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithRelationship:keyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setKeyPath:</TokenIdentifier>
+			<Abstract type="html">The key path that is to be evaluated to obtain the value for the relationship.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *keyPath</Declaration>
+			
+			
+			<Anchor>//api/name/keyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/keyPath</TokenIdentifier>
+			<Abstract type="html">The key path that is to be evaluated to obtain the value for the relationship.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *keyPath</Declaration>
+			
+			
+			<Anchor>//api/name/keyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/isKeyPathConnection</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value indicating if the receiver describes a key path connection.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isKeyPathConnection</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the receiver describes a key path connection, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/isKeyPathConnection</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setRelationship:</TokenIdentifier>
+			<Abstract type="html">Returns the relationship that is to be connected.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSRelationshipDescription *relationship</Declaration>
+			
+			
+			<Anchor>//api/name/relationship</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/relationship</TokenIdentifier>
+			<Abstract type="html">Returns the relationship that is to be connected.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSRelationshipDescription *relationship</Declaration>
+			
+			
+			<Anchor>//api/name/relationship</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setIncludesSubentities:</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value that determines if the connection includes subentities. If NO, then the connection will only be established to objects of exactly the entity specified by the relationship&apos;s entity. If YES, then the connection will be established to all objects of the relationship&apos;s entity and all subentities.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL includesSubentities</Declaration>
+			
+			
+			<Anchor>//api/name/includesSubentities</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/includesSubentities</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value that determines if the connection includes subentities. If NO, then the connection will only be established to objects of exactly the entity specified by the relationship&apos;s entity. If YES, then the connection will be established to all objects of the relationship&apos;s entity and all subentities.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL includesSubentities</Declaration>
+			
+			
+			<Anchor>//api/name/includesSubentities</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setSourcePredicate:</TokenIdentifier>
+			<Abstract type="html">An optional predicate for conditionally evaluating the connection based on the state of the source object.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSPredicate *sourcePredicate</Declaration>
+			
+			
+			<Anchor>//api/name/sourcePredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/sourcePredicate</TokenIdentifier>
+			<Abstract type="html">An optional predicate for conditionally evaluating the connection based on the state of the source object.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSPredicate *sourcePredicate</Declaration>
+			
+			
+			<Anchor>//api/name/sourcePredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKConnectionDescription/setDestinationPredicate:</TokenIdentifier>
+			<Abstract type="html">An optional predicate for filtering objects to be connected.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSPredicate *destinationPredicate</Declaration>
+			
+			
+			<Anchor>//api/name/destinationPredicate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKConnectionDescription/destinationPredicate</TokenIdentifier>
+			<Abstract type="html">An optional predicate for filtering objects to be connected.</Abstract>
+			<DeclaredIn>RKConnectionDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSPredicate *destinationPredicate</Declaration>
+			
+			
+			<Anchor>//api/name/destinationPredicate</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

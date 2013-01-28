@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKDynamicMapping.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKDynamicMapping</TokenIdentifier>
+			<Abstract type="html">The RKDynamicMapping class is an RKMapping subclass that provides an interface for deferring the decision about how a given object representation is to be mapped until run time. This enables many interesting mapping strategies, such as mapping similarly structured data differently and constructing object mappings at run time by examining the data being mapped.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/setObjectMappingForRepresentationBlock:</TokenIdentifier>
+			<Abstract type="html">Sets a block to be invoked to determine the appropriate concrete object mapping with which to map an object representation.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)setObjectMappingForRepresentationBlock:(RKObjectMapping *( ^ ) ( id representation ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The block object to invoke to select the object mapping with which to map the given object representation. The block returns an object mapping and accepts a single parameter: the object representation being mapped.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setObjectMappingForRepresentationBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/setMatchers:</TokenIdentifier>
+			<Abstract type="html">Returns the array of matchers objects added to the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *matchers</Declaration>
+			
+			
+			<Anchor>//api/name/matchers</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKDynamicMapping/matchers</TokenIdentifier>
+			<Abstract type="html">Returns the array of matchers objects added to the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *matchers</Declaration>
+			
+			
+			<Anchor>//api/name/matchers</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/addMatcher:</TokenIdentifier>
+			<Abstract type="html">Adds a matcher to the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addMatcher:(RKObjectMappingMatcher *)matcher</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>matcher</Name>
+					<Abstract type="html">The matcher to add to the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addMatcher:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/removeMatcher:</TokenIdentifier>
+			<Abstract type="html">Removes a matcher from the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeMatcher:(RKObjectMappingMatcher *)matcher</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>matcher</Name>
+					<Abstract type="html">The matcher to remove from the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeMatcher:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/setObjectMappings:</TokenIdentifier>
+			<Abstract type="html">Returns an array of object mappings that have been registered with the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *objectMappings</Declaration>
+			
+			<ReturnValue><Abstract type="html">An array of RKObjectMapping objects registered with the receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKDynamicMapping/objectMappings</TokenIdentifier>
+			<Abstract type="html">Returns an array of object mappings that have been registered with the receiver.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *objectMappings</Declaration>
+			
+			<ReturnValue><Abstract type="html">An array of RKObjectMapping objects registered with the receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKDynamicMapping/objectMappingForRepresentation:</TokenIdentifier>
+			<Abstract type="html">Invoked by the RKMapperOperation and RKMappingOperation to determine the appropriate RKObjectMapping to use when mapping the given object representation.</Abstract>
+			<DeclaredIn>RKDynamicMapping.h</DeclaredIn>			
+			
+			<Declaration>- (RKObjectMapping *)objectMappingForRepresentation:(id)representation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>representation</Name>
+					<Abstract type="html">The object representation that being mapped dynamically for which to determine the appropriate concrete mapping.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The object mapping to be used to map the given object representation.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectMappingForRepresentation:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

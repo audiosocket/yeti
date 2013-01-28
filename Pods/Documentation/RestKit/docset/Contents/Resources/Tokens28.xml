@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKObjectMapping.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKObjectMapping</TokenIdentifier>
+			<Abstract type="html">An RKObjectMapping object describes a transformation between object represenations using key-value coding and run-time type introspection. The mapping is defined in terms of a source object class and a collection of RKPropertyMapping objects describing how key paths in the source representation should be transformed into attributes and relationships on the target object. Object mappings are provided to instances of RKMapperOperation and RKMappingOperation to perform the transformations they describe.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/mappingForClass:</TokenIdentifier>
+			<Abstract type="html">Returns an object mapping for the specified class that is ready for configuration</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)mappingForClass:(Class)objectClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectClass</Name>
+					<Abstract type="html">The class that the mapping targets.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new mapping object.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingForClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/initWithClass:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with a given object class. This is the designated initializer.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithClass:(Class)objectClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectClass</Name>
+					<Abstract type="html">The class that the mapping targets. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver, initialized with the given class.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/requestMapping</TokenIdentifier>
+			<Abstract type="html">Returns an object mapping with an objectClass of NSMutableDictionary.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)requestMapping</Declaration>
+			
+			<ReturnValue><Abstract type="html">An object mapping with an object class of NSMutableDictionary.</Abstract></ReturnValue>
+			<Anchor>//api/name/requestMapping</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setPropertyMappings:</TokenIdentifier>
+			<Abstract type="html">The aggregate collection of attribute and relationship mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *propertyMappings</Declaration>
+			
+			
+			<Anchor>//api/name/propertyMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/propertyMappings</TokenIdentifier>
+			<Abstract type="html">The aggregate collection of attribute and relationship mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *propertyMappings</Declaration>
+			
+			
+			<Anchor>//api/name/propertyMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setPropertyMappingsBySourceKeyPath:</TokenIdentifier>
+			<Abstract type="html">Returns the property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *propertyMappingsBySourceKeyPath</Declaration>
+			
+			<ReturnValue><Abstract type="html">The property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyMappingsBySourceKeyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/propertyMappingsBySourceKeyPath</TokenIdentifier>
+			<Abstract type="html">Returns the property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *propertyMappingsBySourceKeyPath</Declaration>
+			
+			<ReturnValue><Abstract type="html">The property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyMappingsBySourceKeyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setPropertyMappingsByDestinationKeyPath:</TokenIdentifier>
+			<Abstract type="html">Returns the property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *propertyMappingsByDestinationKeyPath</Declaration>
+			
+			<ReturnValue><Abstract type="html">The property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyMappingsByDestinationKeyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/propertyMappingsByDestinationKeyPath</TokenIdentifier>
+			<Abstract type="html">Returns the property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *propertyMappingsByDestinationKeyPath</Declaration>
+			
+			<ReturnValue><Abstract type="html">The property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of RKAttributeMapping or RKRelationshipMapping.</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyMappingsByDestinationKeyPath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setAttributeMappings:</TokenIdentifier>
+			<Abstract type="html">The collection of attribute mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *attributeMappings</Declaration>
+			
+			
+			<Anchor>//api/name/attributeMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/attributeMappings</TokenIdentifier>
+			<Abstract type="html">The collection of attribute mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *attributeMappings</Declaration>
+			
+			
+			<Anchor>//api/name/attributeMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setRelationshipMappings:</TokenIdentifier>
+			<Abstract type="html">The collection of relationship mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *relationshipMappings</Declaration>
+			
+			
+			<Anchor>//api/name/relationshipMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/relationshipMappings</TokenIdentifier>
+			<Abstract type="html">The collection of relationship mappings within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *relationshipMappings</Declaration>
+			
+			
+			<Anchor>//api/name/relationshipMappings</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/mappingForSourceKeyPath:</TokenIdentifier>
+			<Abstract type="html">Returns the property mapping registered with the receiver with the given source key path.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (id)mappingForSourceKeyPath:(NSString *)sourceKeyPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sourceKeyPath</Name>
+					<Abstract type="html">The key path to retrieve.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mappingForSourceKeyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/mappingForDestinationKeyPath:</TokenIdentifier>
+			<Abstract type="html">Returns the property mapping registered with the receiver with the given destinationKeyPath key path.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (id)mappingForDestinationKeyPath:(NSString *)destinationKeyPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>destinationKeyPath</Name>
+					<Abstract type="html">The key path to retrieve.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mappingForDestinationKeyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addPropertyMapping:</TokenIdentifier>
+			<Abstract type="html">Adds a property mapping to the receiver.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addPropertyMapping:(RKPropertyMapping *)propertyMapping</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyMapping</Name>
+					<Abstract type="html">The property mapping to be added to the object mapping.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addPropertyMapping:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addPropertyMappingsFromArray:</TokenIdentifier>
+			<Abstract type="html">Adds an array of RKAttributeMapping or RKRelationshipMapping objects to the receiver.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addPropertyMappingsFromArray:(NSArray *)arrayOfPropertyMappings</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyMappings</Name>
+					<Abstract type="html">The array of property mappings to be added to the object mapping.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addPropertyMappingsFromArray:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/removePropertyMapping:</TokenIdentifier>
+			<Abstract type="html">Removes an RKAttributeMapping or RKRelationshipMapping from the receiver.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)removePropertyMapping:(RKPropertyMapping *)propertyMapping</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyMapping</Name>
+					<Abstract type="html">The attribute or relationship mapping to remove.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removePropertyMapping:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addAttributeMappingsFromDictionary:</TokenIdentifier>
+			<Abstract type="html">Adds attribute mappings from a given dictionary wherein the keys represent the source key path and the values represent the names of the target attributes on the destination object.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addAttributeMappingsFromDictionary:(NSDictionary *)keyPathToAttributeNames</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>keyPathToAttributeNames</Name>
+					<Abstract type="html">A dictionary keyed by source key to destination attribute name.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addAttributeMappingsFromDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addAttributeMappingsFromArray:</TokenIdentifier>
+			<Abstract type="html">Adds attribute mappings to the receiver from a given array.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addAttributeMappingsFromArray:(NSArray *)arrayOfAttributeNamesOrMappings</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>An</Name>
+					<Abstract type="html">array of RKAttributeMapping or NSString values to be added to the receiver&apos;s set of attribute mappings,</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addAttributeMappingsFromArray:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addRelationshipMappingWithSourceKeyPath:mapping:</TokenIdentifier>
+			<Abstract type="html">Adds a relationship mapping to the receiver with the given source key path and mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addRelationshipMappingWithSourceKeyPath:(NSString *)sourceKeyPath mapping:(RKMapping *)mapping</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sourceKeyPath</Name>
+					<Abstract type="html">The source key path at which to read the nested representation of the related objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>mapping</Name>
+					<Abstract type="html">The object mapping with which to process the related object representation.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addRelationshipMappingWithSourceKeyPath:mapping:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/setDefaultSourceToDestinationKeyTransformationBlock:</TokenIdentifier>
+			<Abstract type="html">Sets an application-wide default transformation block to be used when attribute or relationship mappings are added to an object mapping by source key path.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setDefaultSourceToDestinationKeyTransformationBlock:(NSString *( ^ ) ( RKObjectMapping *mapping , NSString *sourceKey ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The block to be set as the default source to destination key transformer for all object mappings in the application.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultSourceToDestinationKeyTransformationBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setSourceToDestinationKeyTransformationBlock:</TokenIdentifier>
+			<Abstract type="html">Sets a block to executed to transform a source key into a destination key.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)setSourceToDestinationKeyTransformationBlock:(NSString *( ^ ) ( RKObjectMapping *mapping , NSString *sourceKey ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The block to execute when the receiver needs to transform a source key into a destination key. The block has a string return value specifying the destination key and accepts a single string argument: the source key that is to be transformed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setSourceToDestinationKeyTransformationBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addAttributeMappingFromKeyOfRepresentationToAttribute:</TokenIdentifier>
+			<Abstract type="html">Adds an attribute mapping from a dynamic nesting key value to an attribute. The mapped attribute name can then be referenced within other attribute mappings to access the nested content.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addAttributeMappingFromKeyOfRepresentationToAttribute:(NSString *)attributeName</Declaration>
+			
+			
+			<Anchor>//api/name/addAttributeMappingFromKeyOfRepresentationToAttribute:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/addAttributeMappingToKeyOfRepresentationFromAttribute:</TokenIdentifier>
+			<Abstract type="html">Adds an attribute mapping to a dynamic nesting key from an attribute. The mapped attribute name can then be referenced wthin other attribute mappings to map content under the nesting key path.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (void)addAttributeMappingToKeyOfRepresentationFromAttribute:(NSString *)attributeName</Declaration>
+			
+			
+			<Anchor>//api/name/addAttributeMappingToKeyOfRepresentationFromAttribute:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setObjectClass:</TokenIdentifier>
+			<Abstract type="html">The target class that the receiver describes a mapping for.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) Class objectClass</Declaration>
+			
+			
+			<Anchor>//api/name/objectClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/objectClass</TokenIdentifier>
+			<Abstract type="html">The target class that the receiver describes a mapping for.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) Class objectClass</Declaration>
+			
+			
+			<Anchor>//api/name/objectClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setSetDefaultValueForMissingAttributes:</TokenIdentifier>
+			<Abstract type="html">When YES, any attributes that have mappings defined but are not present within the source object will be set to nil, clearing any existing value.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign, getter=shouldSetDefaultValueForMissingAttributes) BOOL setDefaultValueForMissingAttributes</Declaration>
+			
+			
+			<Anchor>//api/name/setDefaultValueForMissingAttributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/setDefaultValueForMissingAttributes</TokenIdentifier>
+			<Abstract type="html">When YES, any attributes that have mappings defined but are not present within the source object will be set to nil, clearing any existing value.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign, getter=shouldSetDefaultValueForMissingAttributes) BOOL setDefaultValueForMissingAttributes</Declaration>
+			
+			
+			<Anchor>//api/name/setDefaultValueForMissingAttributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setSetNilForMissingRelationships:</TokenIdentifier>
+			<Abstract type="html">When YES, any relationships that have mappings defined but are not present within the source object will be set to nil, clearing any existing value.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL setNilForMissingRelationships</Declaration>
+			
+			
+			<Anchor>//api/name/setNilForMissingRelationships</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/setNilForMissingRelationships</TokenIdentifier>
+			<Abstract type="html">When YES, any relationships that have mappings defined but are not present within the source object will be set to nil, clearing any existing value.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL setNilForMissingRelationships</Declaration>
+			
+			
+			<Anchor>//api/name/setNilForMissingRelationships</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setPerformKeyValueValidation:</TokenIdentifier>
+			<Abstract type="html">When YES, key-value validation will be invoked at object mapping time.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL performKeyValueValidation</Declaration>
+			
+			
+			<Anchor>//api/name/performKeyValueValidation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/performKeyValueValidation</TokenIdentifier>
+			<Abstract type="html">When YES, key-value validation will be invoked at object mapping time.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL performKeyValueValidation</Declaration>
+			
+			
+			<Anchor>//api/name/performKeyValueValidation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/defaultValueForAttribute:</TokenIdentifier>
+			<Abstract type="html">Returns the default value to be assigned to the specified attribute when it is missing from a mappable payload.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/RKEntityMapping/defaultValueForAttribute:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)defaultValueForAttribute:(NSString *)attributeName</Declaration>
+			
+			
+			<Anchor>//api/name/defaultValueForAttribute:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setDateFormatters:</TokenIdentifier>
+			<Abstract type="html">An array of NSFormatter objects to use when mapping string values into NSDate attributes on the target objectClass. Each date formatter will be invoked with the string value being mapped until one of the date formatters does not return nil.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/defaultDateFormatters</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSArray *dateFormatters</Declaration>
+			
+			
+			<Anchor>//api/name/dateFormatters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/dateFormatters</TokenIdentifier>
+			<Abstract type="html">An array of NSFormatter objects to use when mapping string values into NSDate attributes on the target objectClass. Each date formatter will be invoked with the string value being mapped until one of the date formatters does not return nil.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/defaultDateFormatters</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSArray *dateFormatters</Declaration>
+			
+			
+			<Anchor>//api/name/dateFormatters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/setPreferredDateFormatter:</TokenIdentifier>
+			<Abstract type="html">The NSFormatter object for your application&apos;s preferred date and time configuration. This date formatter will be used when generating string representations of NSDate attributes (i.e. during serialization to URL form encoded or JSON format).</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/preferredDateFormatter</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSFormatter *preferredDateFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/preferredDateFormatter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/preferredDateFormatter</TokenIdentifier>
+			<Abstract type="html">The NSFormatter object for your application&apos;s preferred date and time configuration. This date formatter will be used when generating string representations of NSDate attributes (i.e. during serialization to URL form encoded or JSON format).</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/RKObjectMapping/preferredDateFormatter</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong) NSFormatter *preferredDateFormatter</Declaration>
+			
+			
+			<Anchor>//api/name/preferredDateFormatter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/inverseMapping</TokenIdentifier>
+			<Abstract type="html">Generates an inverse mapping for the rules specified within this object mapping.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (instancetype)inverseMapping</Declaration>
+			
+			<ReturnValue><Abstract type="html">A new mapping that will map the inverse of the receiver.</Abstract></ReturnValue>
+			<Anchor>//api/name/inverseMapping</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/classForProperty:</TokenIdentifier>
+			<Abstract type="html">Returns the class of the attribute or relationship property of the target objectClass with the given name.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (Class)classForProperty:(NSString *)propertyName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyName</Name>
+					<Abstract type="html">The name of the property we would like to retrieve the type of.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The class of the property.</Abstract></ReturnValue>
+			<Anchor>//api/name/classForProperty:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKObjectMapping/classForKeyPath:</TokenIdentifier>
+			<Abstract type="html">Returns the class of the attribute or relationship property of the target objectClass at the given key path.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>- (Class)classForKeyPath:(NSString *)keyPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>propertyName</Name>
+					<Abstract type="html">The name of the property we would like to retrieve the type of.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The class of the property at the given key path.</Abstract></ReturnValue>
+			<Anchor>//api/name/classForKeyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/defaultDateFormatters</TokenIdentifier>
+			<Abstract type="html">Returns the collection of default date formatters that will be used for all object mappings that have not been configured specifically.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (NSArray *)defaultDateFormatters</Declaration>
+			
+			<ReturnValue><Abstract type="html">An array of NSFormatter objects used when mapping strings into NSDate attributes</Abstract></ReturnValue>
+			<Anchor>//api/name/defaultDateFormatters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/setDefaultDateFormatters:</TokenIdentifier>
+			<Abstract type="html">Sets the collection of default date formatters to the specified array. The array should contain configured instances of NSDateFormatter in the order in which you want them applied during object mapping operations.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setDefaultDateFormatters:(NSArray *)dateFormatters</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dateFormatters</Name>
+					<Abstract type="html">An array of date formatters to replace the existing defaults.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultDateFormatters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/addDefaultDateFormatter:</TokenIdentifier>
+			<Abstract type="html">Adds a date formatter instance to the default collection</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (void)addDefaultDateFormatter:(NSFormatter *)dateFormatter</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dateFormatter</Name>
+					<Abstract type="html">An NSFormatter object to prepend to the default formatters collection</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addDefaultDateFormatter:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/addDefaultDateFormatterForString:inTimeZone:</TokenIdentifier>
+			<Abstract type="html">Convenience method for quickly constructing a date formatter and adding it to the collection of default date formatters. The locale is auto-configured to enUSPOSIX.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (void)addDefaultDateFormatterForString:(NSString *)dateFormatString inTimeZone:(NSTimeZone *)nilOrTimeZone</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dateFormatString</Name>
+					<Abstract type="html">The dateFormat string to assign to the newly constructed NSDateFormatter instance</Abstract>
+				</Parameter><Parameter>
+					<Name>nilOrTimeZone</Name>
+					<Abstract type="html">The NSTimeZone object to configure on the NSDateFormatter instance. Defaults to UTC time.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new NSDateFormatter will be prepended to the defaultDateFormatters with the specified date format and time zone</Abstract></ReturnValue>
+			<Anchor>//api/name/addDefaultDateFormatterForString:inTimeZone:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/preferredDateFormatter</TokenIdentifier>
+			<Abstract type="html">Returns the preferred date formatter to use when generating NSString representations from NSDate attributes. This type of transformation occurs when RestKit is mapping local objects into JSON or form encoded serializations that do not have a native time construct.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (NSFormatter *)preferredDateFormatter</Declaration>
+			
+			<ReturnValue><Abstract type="html">The preferred NSFormatter object to use when serializing dates into strings</Abstract></ReturnValue>
+			<Anchor>//api/name/preferredDateFormatter</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKObjectMapping/setPreferredDateFormatter:</TokenIdentifier>
+			<Abstract type="html">Sets the preferred date formatter to use when generating NSString representations from NSDate attributes. This type of transformation occurs when RestKit is mapping local objects into JSON or form encoded serializations that do not have a native time construct.</Abstract>
+			<DeclaredIn>RKObjectMapping.h</DeclaredIn>			
+			
+			<Declaration>+ (void)setPreferredDateFormatter:(NSFormatter *)dateFormatter</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dateFormatter</Name>
+					<Abstract type="html">The NSFormatter object to designate as the new preferred instance</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setPreferredDateFormatter:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
