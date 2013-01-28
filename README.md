@@ -10,7 +10,7 @@ Drop us a line at api@audiosocket.com and we'll get you squared away.
 Please take time to read through the [Audiosocket MaaS API](http://http://develop.audiosocket.com/) to get
 a better understanding of the underlying REST API that Yeti accesses.
 The underlying data used for querying the API and paginating are very similar in Yeti.
-Class level documentation for Yeti is available at (http://develop.audiosocket.com/yeti)
+Class level documentation for Yeti is available at http://develop.audiosocket.com/yeti
 
 Yeti takes full advantage of the excellent [RestKit](https://github.com/RestKit/RestKit)
 framework  by [Blake Watters](http://twitter.com/blakewatters) and the rest of the RestKit team.
@@ -75,9 +75,11 @@ so you can make subsequent network requests. It makes no network requests itself
 
 ## Searching for tracks
 
-Tracks are the heart of the Audiosocket MaaS plaform. The ASTrack class uses the same search parameters
+Tracks are the heart of the Audiosocket MaaS plaform. The
+[ASTrack class](http://develop.audiosocket.com/yeti/Classes/ASTrack.html) uses the same search parameters
 as the Audiosocket Rest API. See [Searching for Music](http://develop.audiosocket.com/v5-api#searching)
-for the details of each search parameter.
+for the details of each search parameter as well as the
+[docs on ASPaginator](http://develop.audiosocket.com/yeti/Classes/ASPaginator.html).
 
 ```
 NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:@{@"q" : @"sunny"}];
@@ -95,7 +97,10 @@ ASPaginator tracks = [[ASPaginator alloc] initWithTargetClass:[ASTrack class]];
 
 ## Loading the context
 
-The ASContext is a wrapper around all the classification information available in the Audiosocket MaaS platform.
+The ASContext is a wrapper around all the classification entities available in the Audiosocket MaaS platform.
+The context, coupled with track search, can be used to provide users with a advanced search
+interface. It is also used to resolve classification entity IDs (see below). Check out
+the [class docs](http://develop.audiosocket.com/yeti/Classes/ASContext.html) for details.
 
 ```
     [ASContext loadWithSuccess:^(ASContext *context) {
@@ -111,7 +116,7 @@ The ASContext is a wrapper around all the classification information available i
 When you use the 'with' parameter when searching for tracks classification
 information can be returned. However, the information returned is most
 often simply IDs of classification entities. To resolve those IDs into
-the actual useful objects do the following *after* the context has been loaded.
+actual useful objects do the following *after* the context has been loaded.
 This assumes you specified 'g' for genres when performing your search.
 
 ```
@@ -121,7 +126,9 @@ ASGenre *genres = [context resolveIDs:track.genreIDs forClass:[ASGenre class]];
 ## Streaming audio
 
 The Yeti SDK does not provide a component to play the audio of a track. However,
-getting a temporary URL to stream the audio is, of course, possible.
+getting a temporary URL to stream the audio is possible by calling the
+[loadStreamingURLWithSuccess:failure:](http://develop.audiosocket.com/yeti/Classes/ASTrack.html#//api/name/loadStreamingURLWithSuccess:failure:)
+on an ASTrack instance.
 
 ```
 [track loadStreamingURLWithSuccess:^(ASTrack *trackWithURL) {
