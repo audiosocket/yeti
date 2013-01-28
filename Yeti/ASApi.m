@@ -12,15 +12,24 @@
 
 @implementation ASApi
 
++ (void) traceLog:(BOOL)trace {
+    if (trace) {
+        RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    } else {
+        RKLogConfigureByName("RestKit/Network*", RKLogLevelWarning);
+        RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelWarning);
+    }
+}
+
 // baseURL for production V5 access is https://api.audiosocket.com/v5
 // token is the token for the api account
 
 + (void) initWithBaseURL:(NSString *)baseURL
                    token:(NSString *)token {
-    
-    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
-    
+
+    [self traceLog:NO];
+
     // Let AFNetworking manage the activity indicator
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;

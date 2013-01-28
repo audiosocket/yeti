@@ -34,11 +34,35 @@
 extern NSString * const AudiosocketAPIToken;
 extern NSString * const AudiosocketBaseURL;
 
-
 /**
 * Allows for initialization of the Audiosocket Yeti SDK.
 */
+
+/*
+* Copyright 2013 Audiosocket
+*
+*   Licensed under the Apache License, Version 2.0 (the "License");
+*   you may not use this file except in compliance with the License.
+*   You may obtain a copy of the License at
+*
+*       http://www.apache.org/licenses/LICENSE-2.0
+*
+*   Unless required by applicable law or agreed to in writing, software
+*   distributed under the License is distributed on an "AS IS" BASIS,
+*   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*   See the License for the specific language governing permissions and
+*   limitations under the License.
+*/
+
 @interface ASApi : NSObject
+
+/**
+* Turn trace logging on or off. If you're having troubles sometimes seeing the full
+* RestKit trace logs can be very helpful.
+*
+* @param trace YES to turn trace logging on, NO to turn it off.
+*/
++ (void)traceLog:(BOOL)trace;
 
 /**
 * Initialize SDK by setting up the base url and providing a token. This method must
