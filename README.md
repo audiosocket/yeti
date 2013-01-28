@@ -82,7 +82,14 @@ for the details of each search parameter as well as the
 [docs on ASPaginator](http://develop.audiosocket.com/yeti/Classes/ASPaginator.html).
 
 ```
-NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:@{@"q" : @"sunny"}];
+// Search for any track with the text 'sunny' and return both genre and
+// mood IDs with each track.
+NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:@{
+                @"q" : @"sunny",
+                @"w" : @"g,m"
+             }];
+
+// Create a paginator to do the actual searching.
 ASPaginator tracks = [[ASPaginator alloc] initWithTargetClass:[ASTrack class]];
 
 [tracks search:dict
