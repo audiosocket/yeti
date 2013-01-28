@@ -10,6 +10,7 @@ Drop us a line at api@audiosocket.com and we'll get you squared away.
 Please take time to read through the [Audiosocket MaaS API](http://http://develop.audiosocket.com/) to get
 a better understanding of the underlying REST API that Yeti accesses.
 The underlying data used for querying the API and paginating are very similar in Yeti.
+Class level documentation for Yeti is available at ....
 
 Yeti takes full advantage of the excellent [RestKit](https://github.com/RestKit/RestKit)
 framework  by [Blake Watters](http://twitter.com/blakewatters) and the rest of the RestKit team.
@@ -52,7 +53,7 @@ $ open <Project>.xcworkspace
 
 The easiest way to get started is to simply initialize the API in your
 AppDelegate didFinishLaunchingWithOptions: method. This call initializes the API
-so you can make subsequent network requests but it makes no network requests itself.
+so you can make subsequent network requests. It makes no network requests itself.
 
 ```
 #import <Yeti/Yeti.h>
@@ -84,7 +85,7 @@ ASPaginator tracks = [[ASPaginator alloc] initWithTargetClass:[ASTrack class]];
 
 [tracks search:dict
        success:^(ASPaginator *paginator) {
-           // Do something with your loaded, e.g. [tableView reloadData];
+           // Do something with your loaded paginator, e.g. [tableView reloadData];
        }
        failure:^(NSError *error) {
            NSLog(@"Error searching for tracks %@", error);
@@ -110,7 +111,8 @@ The ASContext is a wrapper around all the classification information available i
 When you use the 'with' parameter when searching for tracks classification
 information can be returned. However, the information returned is most
 often simply IDs of classification entities. To resolve those IDs into
-the actual useful objects do the following after the context has been loaded.
+the actual useful objects do the following *after* the context has been loaded.
+This assumes you specified 'g' for genres when performing your search.
 
 ```
 ASGenre *genres = [context resolveIDs:track.genreIDs forClass:[ASGenre class]];
@@ -118,8 +120,8 @@ ASGenre *genres = [context resolveIDs:track.genreIDs forClass:[ASGenre class]];
 
 ## Streaming audio
 
-The Yeti SDK does not provide any component to play the audio of a track. However,
-getting a URL to stream the audio is provided.
+The Yeti SDK does not provide a component to play the audio of a track. However,
+getting a temporary URL to stream the audio is, of course, possible.
 
 ```
 [track loadStreamingURLWithSuccess:^(ASTrack *trackWithURL) {
