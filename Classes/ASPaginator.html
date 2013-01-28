@@ -1,0 +1,1502 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ASPaginator Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Yeti </a></h1>
+				<a id="developerHome" href="../index.html">Audiosocket</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ASPaginator Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/isLoaded">&nbsp;&nbsp;&nbsp;&nbsp;isLoaded</option>
+	
+	<option value="//api/name/loadedTotal">&nbsp;&nbsp;&nbsp;&nbsp;loadedTotal</option>
+	
+	<option value="//api/name/loading">&nbsp;&nbsp;&nbsp;&nbsp;loading</option>
+	
+	<option value="//api/name/page">&nbsp;&nbsp;&nbsp;&nbsp;page</option>
+	
+	<option value="//api/name/pages">&nbsp;&nbsp;&nbsp;&nbsp;pages</option>
+	
+	<option value="//api/name/per">&nbsp;&nbsp;&nbsp;&nbsp;per</option>
+	
+	<option value="//api/name/total">&nbsp;&nbsp;&nbsp;&nbsp;total</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
+	
+	<option value="//api/name/hasLoadedAll">&nbsp;&nbsp;&nbsp;&nbsp;- hasLoadedAll</option>
+	
+	<option value="//api/name/hasNextPage">&nbsp;&nbsp;&nbsp;&nbsp;- hasNextPage</option>
+	
+	<option value="//api/name/hasPreviousPage">&nbsp;&nbsp;&nbsp;&nbsp;- hasPreviousPage</option>
+	
+	<option value="//api/name/initWithTargetClass:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithTargetClass:</option>
+	
+	<option value="//api/name/loadNextPageWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- loadNextPageWithSuccess:failure:</option>
+	
+	<option value="//api/name/loadPage:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- loadPage:success:failure:</option>
+	
+	<option value="//api/name/loadPreviousPageWithSuccess:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- loadPreviousPageWithSuccess:failure:</option>
+	
+	<option value="//api/name/objectAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- objectAtIndex:</option>
+	
+	<option value="//api/name/objectForID:">&nbsp;&nbsp;&nbsp;&nbsp;- objectForID:</option>
+	
+	<option value="//api/name/search:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- search:success:failure:</option>
+	
+	<option value="//api/name/searchToPage:params:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- searchToPage:params:success:failure:</option>
+	
+	<option value="//api/name/searchWithEndpoint:params:page:success:failure:">&nbsp;&nbsp;&nbsp;&nbsp;- searchWithEndpoint:params:page:success:failure:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting up a paginator">Setting up a paginator</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing paginator state">Accessing paginator state</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Paging through results">Paging through results</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing returned results">Accessing returned results</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Searching">Searching</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isLoaded">isLoaded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadedTotal">loadedTotal</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loading">loading</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/page">page</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pages">pages</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/per">per</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/total">total</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasLoadedAll">hasLoadedAll</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasNextPage">hasNextPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasPreviousPage">hasPreviousPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithTargetClass:">initWithTargetClass:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadNextPageWithSuccess:failure:">loadNextPageWithSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadPage:success:failure:">loadPage:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadPreviousPageWithSuccess:failure:">loadPreviousPageWithSuccess:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectAtIndex:">objectAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectForID:">objectForID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/search:success:failure:">search:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchToPage:params:success:failure:">searchToPage:params:success:failure:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchWithEndpoint:params:page:success:failure:">searchWithEndpoint:params:page:success:failure:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ASPaginator Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ASPaginator Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ASPaginator.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Used for searching and paging through results of <a href="../Classes/ASObject.html">ASObject</a> instances. Example usage:</p>
+
+<pre><code>   ASPaginator *paginator = [[ASPaginator alloc] initWithTargetClass:[ASTrack class]];
+
+   [paginator search:@{@"q" : @"big band"}
+             success:^(ASPaginator *paginator) {
+                 // ...
+             }
+             failure:^(NSError *error) {
+                 // ...
+             }
+    ];
+</code></pre>
+
+<p>See <a href="http://develop.audiosocket.com/v5-api#searching">the Audiosocket searching API docs</a>
+for what are allowable query parameters.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Setting up a paginator" name="task_Setting up a paginator"></a>
+						<h3 class="subsubtitle task-title">Setting up a paginator</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTargetClass:">&ndash;&nbsp;initWithTargetClass:</a></code>
+		<span class="tooltip"><p>Initialize this paginator for the class specified.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing paginator state" name="task_Accessing paginator state"></a>
+						<h3 class="subsubtitle task-title">Accessing paginator state</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/per">&nbsp;&nbsp;per</a></code>
+		<span class="tooltip"><p>Object per <a href="#//api/name/page">page</a> to include in the result set. Can be specified
+before any request is performed.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/page">&nbsp;&nbsp;page</a></code>
+		<span class="tooltip"><p>Most recent page returned.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pages">&nbsp;&nbsp;pages</a></code>
+		<span class="tooltip"><p>Total number of pages available.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/total">&nbsp;&nbsp;total</a></code>
+		<span class="tooltip"><p>Total number of objects that are available.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isLoaded">&nbsp;&nbsp;isLoaded</a></code>
+		<span class="tooltip"><p>YES if the paginator has been loaded.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadedTotal">&nbsp;&nbsp;loadedTotal</a></code>
+		<span class="tooltip"><p>Total number of objects that have actually been loaded.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loading">&nbsp;&nbsp;loading</a></code>
+		<span class="tooltip"><p>Return YES if this paginator is currently issuing a request. Multiple
+simultaneous requests can not be performed.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasNextPage">&ndash;&nbsp;hasNextPage</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if there is a next <a href="#//api/name/page">page</a> in the collection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasPreviousPage">&ndash;&nbsp;hasPreviousPage</a></code>
+		<span class="tooltip"><p>Returns a Boolean value indicating if there is a previous <a href="#//api/name/page">page</a> in the collection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasLoadedAll">&ndash;&nbsp;hasLoadedAll</a></code>
+		<span class="tooltip"><p>Return YES if all elements in the result set have been loaded.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Paging through results" name="task_Paging through results"></a>
+						<h3 class="subsubtitle task-title">Paging through results</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadNextPageWithSuccess:failure:">&ndash;&nbsp;loadNextPageWithSuccess:failure:</a></code>
+		<span class="tooltip"><p>Loads the next <a href="#//api/name/page">page</a>. At least on load must have been done prior to this call.
+If there are no more <a href="#//api/name/pages">pages</a> this will still make the call and no more records
+will be retrieved.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadPreviousPageWithSuccess:failure:">&ndash;&nbsp;loadPreviousPageWithSuccess:failure:</a></code>
+		<span class="tooltip"><p>Loads the previous <a href="#//api/name/page">page</a>. At least on load must have been done prior to this call.
+If the current <a href="#//api/name/page">page</a> is <a href="#//api/name/page">page</a> 1 this will still make the call but no more records
+will be retrieved.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadPage:success:failure:">&ndash;&nbsp;loadPage:success:failure:</a></code>
+		<span class="tooltip"><p>Loads the specified <a href="#//api/name/page">page</a>. If a search has not been performed then
+no query parameters are used. If a search has been prior to calling this
+the <a href="#//api/name/page">page</a> is loaded using those same parameters.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+		<span class="tooltip"><p>Cancels an in-progress pagination request.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing returned results" name="task_Accessing returned results"></a>
+						<h3 class="subsubtitle task-title">Accessing returned results</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectAtIndex:">&ndash;&nbsp;objectAtIndex:</a></code>
+		<span class="tooltip"><p>Return the object at the index specified. Must be less then
+the &lsquo;loadedTotal&rsquo;.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectForID:">&ndash;&nbsp;objectForID:</a></code>
+		<span class="tooltip"><p>Return the object that matches the objectID passed in from within
+the loaded objects. If no object has been loaded with that ID
+then nil is returned.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Searching" name="task_Searching"></a>
+						<h3 class="subsubtitle task-title">Searching</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/search:success:failure:">&ndash;&nbsp;search:success:failure:</a></code>
+		<span class="tooltip"><p>Search for instances using params specified.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchToPage:params:success:failure:">&ndash;&nbsp;searchToPage:params:success:failure:</a></code>
+		<span class="tooltip"><p>Search for instances using params specified returning the <a href="#//api/name/page">page</a> specified.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchWithEndpoint:params:page:success:failure:">&ndash;&nbsp;searchWithEndpoint:params:page:success:failure:</a></code>
+		<span class="tooltip"><p>Search for instances by issuing a request to the endpoint specified.
+This method is useful when retrieving nested collections such as
+<a href="../Classes/ASAlbum.html#//api/name/loadTracksWithSuccess:failure:">[ASAlbum loadTracksWithSuccess:failure:]</a>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isLoaded" title="isLoaded"></a>
+	<h3 class="subsubtitle method-title">isLoaded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>YES if the paginator has been loaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL isLoaded</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadedTotal" title="loadedTotal"></a>
+	<h3 class="subsubtitle method-title">loadedTotal</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Total number of objects that have actually been loaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger loadedTotal</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loading" title="loading"></a>
+	<h3 class="subsubtitle method-title">loading</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if this paginator is currently issuing a request. Multiple
+simultaneous requests can not be performed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL loading</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/page" title="page"></a>
+	<h3 class="subsubtitle method-title">page</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Most recent page returned.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSUInteger page</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pages" title="pages"></a>
+	<h3 class="subsubtitle method-title">pages</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Total number of pages available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger pages</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/per" title="per"></a>
+	<h3 class="subsubtitle method-title">per</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Object per <a href="#//api/name/page">page</a> to include in the result set. Can be specified
+before any request is performed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSUInteger per</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/total" title="total"></a>
+	<h3 class="subsubtitle method-title">total</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Total number of objects that are available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger total</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="subsubtitle method-title">cancel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancels an in-progress pagination request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasLoadedAll" title="hasLoadedAll"></a>
+	<h3 class="subsubtitle method-title">hasLoadedAll</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if all elements in the result set have been loaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasLoadedAll</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasNextPage" title="hasNextPage"></a>
+	<h3 class="subsubtitle method-title">hasNextPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if there is a next <a href="#//api/name/page">page</a> in the collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasNextPage</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if there is a next <a href="#//api/name/page">page</a>, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if the paginator has not loaded or
+know its current <a href="#//api/name/page">page</a> number.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasPreviousPage" title="hasPreviousPage"></a>
+	<h3 class="subsubtitle method-title">hasPreviousPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a Boolean value indicating if there is a previous <a href="#//api/name/page">page</a> in the collection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasPreviousPage</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if there is a next <a href="#//api/name/page">page</a>, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInternalInconsistencyException</em></dt>
+			<dd><p>Raised if the paginator
+has not loaded or know its current <a href="#//api/name/page">page</a> number.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithTargetClass:" title="initWithTargetClass:"></a>
+	<h3 class="subsubtitle method-title">initWithTargetClass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize this paginator for the class specified.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ASPaginator *)initWithTargetClass:(Class)<em>objectClass</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectClass</em></dt>
+			<dd><p>Class of objects to search for. Must be
+a subclass of <a href="../Classes/ASObject.html">ASObject</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadNextPageWithSuccess:failure:" title="loadNextPageWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">loadNextPageWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the next <a href="#//api/name/page">page</a>. At least on load must have been done prior to this call.
+If there are no more <a href="#//api/name/pages">pages</a> this will still make the call and no more records
+will be retrieved.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadNextPageWithSuccess:(void ( ^ ) ( ASPaginator *paginator ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied called when the next <a href="#//api/name/page">page</a> has loaded. &lsquo;self&rsquo; is passed
+to the supplied block.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied called when an error occurs issuing the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadPage:success:failure:" title="loadPage:success:failure:"></a>
+	<h3 class="subsubtitle method-title">loadPage:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the specified <a href="#//api/name/page">page</a>. If a search has not been performed then
+no query parameters are used. If a search has been prior to calling this
+the <a href="#//api/name/page">page</a> is loaded using those same parameters.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadPage:(NSUInteger)<em>pageNumber</em> success:(void ( ^ ) ( ASPaginator *ASPaginator ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pageNumber</em></dt>
+			<dd><p>Page to load. 1 is the first <a href="#//api/name/page">page</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied called when the <a href="#//api/name/page">page</a> has loaded. &lsquo;self&rsquo; is passed
+to the supplied block.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied called when an error occurs issuing the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadPreviousPageWithSuccess:failure:" title="loadPreviousPageWithSuccess:failure:"></a>
+	<h3 class="subsubtitle method-title">loadPreviousPageWithSuccess:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the previous <a href="#//api/name/page">page</a>. At least on load must have been done prior to this call.
+If the current <a href="#//api/name/page">page</a> is <a href="#//api/name/page">page</a> 1 this will still make the call but no more records
+will be retrieved.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadPreviousPageWithSuccess:(void ( ^ ) ( ASPaginator *paginator ))<em>success</em> failure:(void ( ^ ) ( NSError *error ))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied called when the previous <a href="#//api/name/page">page</a> has loaded. &lsquo;self&rsquo; is passed
+to the supplied block.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied called when an error occurs issuing the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectAtIndex:" title="objectAtIndex:"></a>
+	<h3 class="subsubtitle method-title">objectAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the object at the index specified. Must be less then
+the &lsquo;loadedTotal&rsquo;.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ASObject *)objectAtIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>position of the object to return.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectForID:" title="objectForID:"></a>
+	<h3 class="subsubtitle method-title">objectForID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the object that matches the objectID passed in from within
+the loaded objects. If no object has been loaded with that ID
+then nil is returned.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ASObject *)objectForID:(NSInteger)<em>objectID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>objectID</em></dt>
+			<dd><p>ID of the object to return.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/search:success:failure:" title="search:success:failure:"></a>
+	<h3 class="subsubtitle method-title">search:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Search for instances using params specified.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)search:(NSDictionary *)<em>params</em> success:(void ( ^ ) ( ASPaginator *))<em>success</em> failure:(void ( ^ ) ( NSError *))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>params</em></dt>
+			<dd><p>Optional query parameters to search for. See the
+<a href="http://develop.audiosocket.com/v5-api">http://develop.audiosocket.com/v5-api</a> docs for
+info on what valid parameters are for the given
+target class this ASPaginator is setup for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied invoked when the search successfully returns.
+The block is passed &lsquo;self&rsquo;.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied invoked when the search request encounters an
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchToPage:params:success:failure:" title="searchToPage:params:success:failure:"></a>
+	<h3 class="subsubtitle method-title">searchToPage:params:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Search for instances using params specified returning the <a href="#//api/name/page">page</a> specified.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)searchToPage:(NSUInteger)<em>page</em> params:(NSDictionary *)<em>params</em> success:(void ( ^ ) ( ASPaginator *))<em>success</em> failure:(void ( ^ ) ( NSError *))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>page</em></dt>
+			<dd><p>Page of the result set to return.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>params</em></dt>
+			<dd><p>Optional query parameters to search for. See the
+<a href="http://develop.audiosocket.com/v5-api">http://develop.audiosocket.com/v5-api</a> docs for
+info on what valid parameters are for the given
+target class this ASPaginator is setup for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied invoked when the search successfully returns.
+The block is passed &lsquo;self&rsquo;.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied invoked when the search request encounters an
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchWithEndpoint:params:page:success:failure:" title="searchWithEndpoint:params:page:success:failure:"></a>
+	<h3 class="subsubtitle method-title">searchWithEndpoint:params:page:success:failure:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Search for instances by issuing a request to the endpoint specified.
+This method is useful when retrieving nested collections such as
+<a href="../Classes/ASAlbum.html#//api/name/loadTracksWithSuccess:failure:">[ASAlbum loadTracksWithSuccess:failure:]</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)searchWithEndpoint:(NSString *)<em>endpointName</em> params:(NSDictionary *)<em>params</em> page:(NSUInteger)<em>page</em> success:(void ( ^ ) ( ASPaginator *))<em>success</em> failure:(void ( ^ ) ( NSError *))<em>failure</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>endpointName</em></dt>
+			<dd><p>Endpoint to issue request to. It should include the
+baseURL portion supplied to the <a href="../Classes/ASApi.html#//api/name/initWithBaseURL:token:">[ASApi initWithBaseURL:token:]</a>
+method.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>params</em></dt>
+			<dd><p>Optional query parameters to search for. See the
+<a href="http://develop.audiosocket.com/v5-api">http://develop.audiosocket.com/v5-api</a> docs for
+info on what valid parameters are for the given
+target class this ASPaginator is setup for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>page</em></dt>
+			<dd><p>Page of the result set to return.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>success</em></dt>
+			<dd><p>If supplied invoked when the search successfully returns.
+The block is passed &lsquo;self&rsquo;.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failure</em></dt>
+			<dd><p>If supplied invoked when the search request encounters an
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ASPaginator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Audiosocket. All rights reserved. (Last updated: 2013-01-25)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
