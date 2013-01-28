@@ -60,6 +60,10 @@ so you can make subsequent network requests but it makes no network requests its
 
 @implementation AppDelegate
 
+// API_BASE_URL   Normally https://api.audiosocket.com/v5 for the production environment.
+//                A sandbox environemnt is also available upon request.
+// YOUR_API_TOKEN Account token provided to you by Audiosocket.
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ASApi initWithBaseURL:@"API_BASE_URL" token:@"YOUR_API_TOKEN"];
@@ -68,9 +72,64 @@ so you can make subsequent network requests but it makes no network requests its
 }
 ```
 
-* API_BASE_URL Normally https://api.audiosocket.com/v5 for the production environment. A sandbox environemnt is also available upon request.
-* YOUR_API_TOKEN Account token provided to you by Audiosocket.
+## Searching for tracks
 
+Tracks are the heart of the Audiosocket MaaS plaform. The ASTrack class uses the same search parameters
+as the Audiosocket Rest API. See [Searching for Music](http://develop.audiosocket.com/v5-api#searching)
+for the details of each search parameter.
+
+```
+NSDictionary *dict = [[NSDictionary alloc] initWithDictionary:@{@"q" : @"sunny"}];
+ASPaginator tracks = [[ASPaginator alloc] initWithTargetClass:[ASTrack class]];
+
+[tracks search:dict
+       success:^(ASPaginator *paginator) {
+           // Do something with your loaded, e.g. [tableView reloadData];
+       }
+       failure:^(NSError *error) {
+           NSLog(@"Error searching for tracks %@", error);
+       }
+];
+```
+
+## Loading the context
+
+The ASContext is a wrapper around all the classification information available in the Audiosocket MaaS platform.
+
+```
+    [ASContext loadWithSuccess:^(ASContext *context) {
+        // Save off context for later...
+    } failure:^(NSError *error) {
+        NSLog(@"Error loading context");
+    }];
+
+```
+
+### Using the context to resolve classification entities
+
+When you use the 'with' parameter when searching for tracks classification
+information can be returned. However, the information returned is most
+often simply IDs of classification entities. To resolve those IDs into
+the actual useful objects do the following after the context has been loaded.
+
+```
+ASGenre *genres = [context resolveIDs:track.genreIDs forClass:[ASGenre class]];
+```
+
+## Streaming audio
+
+The Yeti SDK does not provide any component to play the audio of a track. However,
+getting a URL to stream the audio is provided.
+
+```
+[track loadStreamingURLWithSuccess:^(ASTrack *trackWithURL) {
+                                // Pass trackWithURL.streamingURL to your audio player
+                           }
+                           failure:^(NSError *error) {
+                               NSLog(@"Error retrieving URL: %@", error);
+                           }
+];
+```
 
 ## License
 
