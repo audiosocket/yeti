@@ -1,4 +1,4 @@
-# Yeti - Audiosocket iOS SKD
+# Yeti - Audiosocket iOS SDK
 
 Yeti is a iOS SDK comprised of Objective-C objects that provide simplified access to the
 [Audiosocket MaaS API](http://http://develop.audiosocket.com/).
