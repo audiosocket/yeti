@@ -143,7 +143,7 @@ on an ASTrack instance.
 ## License
 
 Yeti is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-Please see the [LICENSE](https://github.com/Yeti/Yeti/blob/master/LICENSE) file for full details.
+Please see the [LICENSE](https://raw.github.com/audiosocket/yeti/master/LICENSE) file for full details.
 
 RestKit is also licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 Please see its [LICENSE](https://github.com/RestKit/RestKit/blob/master/LICENSE) file for full details.
