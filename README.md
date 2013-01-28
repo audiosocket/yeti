@@ -34,7 +34,7 @@ $ vi Podfile
 platform :ios, '5.0'
 
 pod 'RestKit', '~> 0.20.0pre'
-pod 'Yeti', :local => "../Yeti"
+pod 'Yeti', { :git => 'https://github.com/audiosocket/yeti.git', :tag => 'v0.2.0' }
 ```
 
 Download all dependencies defined in `Podfile' and creates an Xcode Pods library project:
@@ -146,4 +146,4 @@ Yeti is licensed under the terms of the [Apache License, version 2.0](http://www
 Please see the [LICENSE](https://github.com/Yeti/Yeti/blob/master/LICENSE) file for full details.
 
 RestKit is also licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-Please see the [LICENSE](https://github.com/RestKit/RestKit/blob/master/LICENSE) file for full details.
+Please see its [LICENSE](https://github.com/RestKit/RestKit/blob/master/LICENSE) file for full details.
