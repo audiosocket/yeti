@@ -6,67 +6,27 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		36C738ED16AF69A1009ACB46 /* Framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 36C738EE16AF69A1009ACB46 /* Build configuration list for PBXAggregateTarget "Framework" */;
-			buildPhases = (
-				36C738F316AF6B7B009ACB46 /* ShellScript */,
-			);
-			dependencies = (
-				36C738F216AF69EB009ACB46 /* PBXTargetDependency */,
-			);
-			name = Framework;
-			productName = Framework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		36AFA84816AF33070011F6FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AFA84716AF33070011F6FB /* Foundation.framework */; };
-		36AFA85716AF33070011F6FB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AFA85616AF33070011F6FB /* SenTestingKit.framework */; };
-		36AFA85916AF33070011F6FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AFA85816AF33070011F6FB /* UIKit.framework */; };
-		36AFA85A16AF33070011F6FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AFA84716AF33070011F6FB /* Foundation.framework */; };
-		36AFA85D16AF33070011F6FB /* libYeti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AFA84416AF33070011F6FB /* libYeti.a */; };
-		36AFA86316AF33070011F6FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AFA86116AF33070011F6FB /* InfoPlist.strings */; };
-		36AFA86616AF33070011F6FB /* YetiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA86516AF33070011F6FB /* YetiTests.m */; };
 		36AFA87116AF34490011F6FB /* ASApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87016AF34490011F6FB /* ASApi.m */; };
-		36AFA87216AF34490011F6FB /* ASApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87016AF34490011F6FB /* ASApi.m */; };
 		36AFA89816AF34540011F6FB /* ASAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87516AF34540011F6FB /* ASAlbum.m */; };
-		36AFA89916AF34540011F6FB /* ASAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87516AF34540011F6FB /* ASAlbum.m */; };
 		36AFA89A16AF34540011F6FB /* ASArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87716AF34540011F6FB /* ASArtist.m */; };
-		36AFA89B16AF34540011F6FB /* ASArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87716AF34540011F6FB /* ASArtist.m */; };
 		36AFA89C16AF34540011F6FB /* ASCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87916AF34540011F6FB /* ASCategory.m */; };
-		36AFA89D16AF34540011F6FB /* ASCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87916AF34540011F6FB /* ASCategory.m */; };
 		36AFA89E16AF34540011F6FB /* ASContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87B16AF34540011F6FB /* ASContext.m */; };
-		36AFA89F16AF34540011F6FB /* ASContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87B16AF34540011F6FB /* ASContext.m */; };
 		36AFA8A016AF34540011F6FB /* ASEnding.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87D16AF34540011F6FB /* ASEnding.m */; };
-		36AFA8A116AF34540011F6FB /* ASEnding.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87D16AF34540011F6FB /* ASEnding.m */; };
 		36AFA8A216AF34540011F6FB /* ASGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87F16AF34540011F6FB /* ASGenre.m */; };
-		36AFA8A316AF34540011F6FB /* ASGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA87F16AF34540011F6FB /* ASGenre.m */; };
 		36AFA8A416AF34540011F6FB /* ASInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88116AF34540011F6FB /* ASInstrument.m */; };
-		36AFA8A516AF34540011F6FB /* ASInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88116AF34540011F6FB /* ASInstrument.m */; };
 		36AFA8A616AF34540011F6FB /* ASIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88316AF34540011F6FB /* ASIntro.m */; };
-		36AFA8A716AF34540011F6FB /* ASIntro.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88316AF34540011F6FB /* ASIntro.m */; };
 		36AFA8A816AF34540011F6FB /* ASLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88516AF34540011F6FB /* ASLanguage.m */; };
-		36AFA8A916AF34540011F6FB /* ASLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88516AF34540011F6FB /* ASLanguage.m */; };
 		36AFA8AA16AF34540011F6FB /* ASMood.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88716AF34540011F6FB /* ASMood.m */; };
-		36AFA8AB16AF34540011F6FB /* ASMood.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88716AF34540011F6FB /* ASMood.m */; };
 		36AFA8AC16AF34540011F6FB /* ASNestedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88916AF34540011F6FB /* ASNestedObject.m */; };
-		36AFA8AD16AF34540011F6FB /* ASNestedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88916AF34540011F6FB /* ASNestedObject.m */; };
 		36AFA8AE16AF34540011F6FB /* ASObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88B16AF34540011F6FB /* ASObject.m */; };
-		36AFA8AF16AF34540011F6FB /* ASObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88B16AF34540011F6FB /* ASObject.m */; };
 		36AFA8B016AF34540011F6FB /* ASPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88D16AF34540011F6FB /* ASPaginator.m */; };
-		36AFA8B116AF34540011F6FB /* ASPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88D16AF34540011F6FB /* ASPaginator.m */; };
 		36AFA8B216AF34540011F6FB /* ASRestriction.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88F16AF34540011F6FB /* ASRestriction.m */; };
-		36AFA8B316AF34540011F6FB /* ASRestriction.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA88F16AF34540011F6FB /* ASRestriction.m */; };
 		36AFA8B416AF34540011F6FB /* ASTempo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89116AF34540011F6FB /* ASTempo.m */; };
-		36AFA8B516AF34540011F6FB /* ASTempo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89116AF34540011F6FB /* ASTempo.m */; };
 		36AFA8B616AF34540011F6FB /* ASTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89316AF34540011F6FB /* ASTheme.m */; };
-		36AFA8B716AF34540011F6FB /* ASTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89316AF34540011F6FB /* ASTheme.m */; };
 		36AFA8B816AF34540011F6FB /* ASTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89516AF34540011F6FB /* ASTrack.m */; };
-		36AFA8B916AF34540011F6FB /* ASTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89516AF34540011F6FB /* ASTrack.m */; };
 		36AFA8BA16AF34540011F6FB /* ASVocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89716AF34540011F6FB /* ASVocal.m */; };
-		36AFA8BB16AF34540011F6FB /* ASVocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AFA89716AF34540011F6FB /* ASVocal.m */; };
 		36AFA8D916AF4F0C0011F6FB /* Yeti.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AFA84C16AF33070011F6FB /* Yeti.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AFA8DA16AF4FCE0011F6FB /* ASAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AFA87416AF34540011F6FB /* ASAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36AFA8DB16AF4FCE0011F6FB /* ASArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 36AFA87616AF34540011F6FB /* ASArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,23 +49,6 @@
 		36C738EB16AF64F4009ACB46 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C738EA16AF64F4009ACB46 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		36AFA85B16AF33070011F6FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 36AFA83B16AF33070011F6FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36AFA84316AF33070011F6FB;
-			remoteInfo = Yeti;
-		};
-		36C738F116AF69EB009ACB46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 36AFA83B16AF33070011F6FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36AFA84316AF33070011F6FB;
-			remoteInfo = Yeti;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		36AFA84216AF33070011F6FB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -123,13 +66,8 @@
 		36AFA84716AF33070011F6FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		36AFA84B16AF33070011F6FB /* Yeti-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yeti-Prefix.pch"; sourceTree = "<group>"; };
 		36AFA84C16AF33070011F6FB /* Yeti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yeti.h; sourceTree = "<group>"; };
-		36AFA85516AF33070011F6FB /* YetiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YetiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AFA85616AF33070011F6FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		36AFA85816AF33070011F6FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		36AFA86016AF33070011F6FB /* YetiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YetiTests-Info.plist"; sourceTree = "<group>"; };
-		36AFA86216AF33070011F6FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		36AFA86416AF33070011F6FB /* YetiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YetiTests.h; sourceTree = "<group>"; };
-		36AFA86516AF33070011F6FB /* YetiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YetiTests.m; sourceTree = "<group>"; };
 		36AFA86F16AF34490011F6FB /* ASApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASApi.h; sourceTree = "<group>"; };
 		36AFA87016AF34490011F6FB /* ASApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASApi.m; sourceTree = "<group>"; };
 		36AFA87416AF34540011F6FB /* ASAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAlbum.h; sourceTree = "<group>"; };
@@ -192,17 +130,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36AFA85116AF33070011F6FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36AFA85716AF33070011F6FB /* SenTestingKit.framework in Frameworks */,
-				36AFA85916AF33070011F6FB /* UIKit.framework in Frameworks */,
-				36AFA85A16AF33070011F6FB /* Foundation.framework in Frameworks */,
-				36AFA85D16AF33070011F6FB /* libYeti.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -210,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				36AFA84916AF33070011F6FB /* Yeti */,
-				36AFA85E16AF33070011F6FB /* YetiTests */,
 				36AFA84616AF33070011F6FB /* Frameworks */,
 				36AFA84516AF33070011F6FB /* Products */,
 				B8993957AB304FED96908C14 /* Pods.xcconfig */,
@@ -227,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				36AFA84416AF33070011F6FB /* libYeti.a */,
-				36AFA85516AF33070011F6FB /* YetiTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,25 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				36AFA84B16AF33070011F6FB /* Yeti-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		36AFA85E16AF33070011F6FB /* YetiTests */ = {
-			isa = PBXGroup;
-			children = (
-				36AFA86416AF33070011F6FB /* YetiTests.h */,
-				36AFA86516AF33070011F6FB /* YetiTests.m */,
-				36AFA85F16AF33070011F6FB /* Supporting Files */,
-			);
-			path = YetiTests;
-			sourceTree = "<group>";
-		};
-		36AFA85F16AF33070011F6FB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				36AFA86016AF33070011F6FB /* YetiTests-Info.plist */,
-				36AFA86116AF33070011F6FB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -380,25 +286,6 @@
 			productReference = 36AFA84416AF33070011F6FB /* libYeti.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		36AFA85416AF33070011F6FB /* YetiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36AFA86C16AF33070011F6FB /* Build configuration list for PBXNativeTarget "YetiTests" */;
-			buildPhases = (
-				36AFA85016AF33070011F6FB /* Sources */,
-				36AFA85116AF33070011F6FB /* Frameworks */,
-				36AFA85216AF33070011F6FB /* Resources */,
-				36AFA85316AF33070011F6FB /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36AFA85C16AF33070011F6FB /* PBXTargetDependency */,
-			);
-			name = YetiTests;
-			productName = YetiTests;
-			productReference = 36AFA85516AF33070011F6FB /* YetiTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -421,22 +308,9 @@
 			projectRoot = "";
 			targets = (
 				36AFA84316AF33070011F6FB /* Yeti */,
-				36AFA85416AF33070011F6FB /* YetiTests */,
-				36C738ED16AF69A1009ACB46 /* Framework */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		36AFA85216AF33070011F6FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36AFA86316AF33070011F6FB /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		10EEE00F0DB5480CBCD82417 /* Copy Pods Resources */ = {
@@ -467,19 +341,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
-		36AFA85316AF33070011F6FB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 		36C738E716AF6252009ACB46 /* prepare_framework.sh */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,19 +354,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\necho \"Building into ${BUILT_PRODUCTS_DIR}\"\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
-		};
-		36C738F316AF6B7B009ACB46 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -536,58 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36AFA85016AF33070011F6FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36AFA86616AF33070011F6FB /* YetiTests.m in Sources */,
-				36AFA87216AF34490011F6FB /* ASApi.m in Sources */,
-				36AFA89916AF34540011F6FB /* ASAlbum.m in Sources */,
-				36AFA89B16AF34540011F6FB /* ASArtist.m in Sources */,
-				36AFA89D16AF34540011F6FB /* ASCategory.m in Sources */,
-				36AFA89F16AF34540011F6FB /* ASContext.m in Sources */,
-				36AFA8A116AF34540011F6FB /* ASEnding.m in Sources */,
-				36AFA8A316AF34540011F6FB /* ASGenre.m in Sources */,
-				36AFA8A516AF34540011F6FB /* ASInstrument.m in Sources */,
-				36AFA8A716AF34540011F6FB /* ASIntro.m in Sources */,
-				36AFA8A916AF34540011F6FB /* ASLanguage.m in Sources */,
-				36AFA8AB16AF34540011F6FB /* ASMood.m in Sources */,
-				36AFA8AD16AF34540011F6FB /* ASNestedObject.m in Sources */,
-				36AFA8AF16AF34540011F6FB /* ASObject.m in Sources */,
-				36AFA8B116AF34540011F6FB /* ASPaginator.m in Sources */,
-				36AFA8B316AF34540011F6FB /* ASRestriction.m in Sources */,
-				36AFA8B516AF34540011F6FB /* ASTempo.m in Sources */,
-				36AFA8B716AF34540011F6FB /* ASTheme.m in Sources */,
-				36AFA8B916AF34540011F6FB /* ASTrack.m in Sources */,
-				36AFA8BB16AF34540011F6FB /* ASVocal.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		36AFA85C16AF33070011F6FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36AFA84316AF33070011F6FB /* Yeti */;
-			targetProxy = 36AFA85B16AF33070011F6FB /* PBXContainerItemProxy */;
-		};
-		36C738F216AF69EB009ACB46 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36AFA84316AF33070011F6FB /* Yeti */;
-			targetProxy = 36C738F116AF69EB009ACB46 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		36AFA86116AF33070011F6FB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36AFA86216AF33070011F6FB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		36AFA86716AF33070011F6FB /* Debug */ = {
@@ -671,50 +468,6 @@
 			};
 			name = Release;
 		};
-		36AFA86D16AF33070011F6FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Yeti/Yeti-Prefix.pch";
-				INFOPLIST_FILE = "YetiTests/YetiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		36AFA86E16AF33070011F6FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Yeti/Yeti-Prefix.pch";
-				INFOPLIST_FILE = "YetiTests/YetiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-		36C738EF16AF69A1009ACB46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		36C738F016AF69A1009ACB46 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -732,24 +485,6 @@
 			buildConfigurations = (
 				36AFA86A16AF33070011F6FB /* Debug */,
 				36AFA86B16AF33070011F6FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36AFA86C16AF33070011F6FB /* Build configuration list for PBXNativeTarget "YetiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36AFA86D16AF33070011F6FB /* Debug */,
-				36AFA86E16AF33070011F6FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36C738EE16AF69A1009ACB46 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36C738EF16AF69A1009ACB46 /* Debug */,
-				36C738F016AF69A1009ACB46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
