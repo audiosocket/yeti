@@ -14,7 +14,7 @@
 
 @interface ASNestedObject : ASObject
 
-@property (nonatomic) NSArray *children;
+@property (strong, readonly) NSArray *children;
 
 /**
 * Return 'self' if targetID is equal self.ID, otherwise iterate over

@@ -11,7 +11,12 @@
 @implementation ASNestedObject
 
 + (RKObjectMapping *) instanceObjectMapping {
-    RKObjectMapping *mapping = [super instanceObjectMapping];
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self];
+
+    [mapping addAttributeMappingsFromDictionary:@{
+            @"id"     : @"ID",
+            @"name"   : @"name"
+    }];
 
     [self addChildrenMapping:mapping];
 
@@ -20,10 +25,10 @@
 
 + (void) addChildrenMapping:(RKObjectMapping *)mapping {
     [mapping addPropertyMapping:
-     [RKRelationshipMapping relationshipMappingFromKeyPath:@"children"
-                                                 toKeyPath:@"children"
-                                               withMapping:mapping]
-     ];
+            [RKRelationshipMapping relationshipMappingFromKeyPath:@"children"
+                                                        toKeyPath:@"children"
+                                                      withMapping:mapping]
+    ];
 }
 
 - (ASObject *)resolve:(NSNumber *)targetID {

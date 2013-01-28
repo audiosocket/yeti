@@ -1,7 +1,4 @@
 //
-//  ASMood.h
-//  yeti
-//
 //  Created by Charles Morss on 12/31/12.
 //  Copyright (c) 2012 Audiosocket. All rights reserved.
 //
@@ -11,17 +8,28 @@
 #import "ASArtist.h"
 
 /**
- * Tracks are the heart of the platform, and represent a playable piece of music.
- * Methods for Searching and streaming tracks are documented in detail above.
- * For speedy results, many track attributes are omitted when searching via
- * an ASPaginator. However by using the 'with' parameter when performing a
- * search additional attributes or their ids can be retrieved. See
- * [the Audiosocket searching API docs](http://develop.audiosocket.com/v5-api#searching)
- * for more details on the 'with' parameter. All attributes can be retrieved from the
- * track’s /tracks/:id singular resource.
- */
+ Tracks are the heart of the platform, and represent a playable piece of music.
+ Methods for Searching and streaming tracks are documented in detail above.
+ For speedy results, many track attributes are omitted when searching via
+ an ASPaginator. However by using the 'with' parameter when performing a
+ search additional attributes or their ids can be retrieved. See
+ [the Audiosocket searching API docs](http://develop.audiosocket.com/v5-api#searching)
+ for more details on the 'with' parameter. All attributes can be retrieved from the
+ track’s /tracks/:id singular resource.
+
+ Many of the track properties are a list of ids. These IDs can be 'resolved' by
+ using the ASContext. Typically you'll want to load the context once then resolve
+ ids using:
+
+       NSArray *genres = [context resolveIDs:track.genreIDs forClass:[ASGenre class]];
+
+*/
 
 @interface ASTrack : ASObject
+
+/// ----------------------------------
+/// @name Track attributes
+/// ----------------------------------
 
 /**
 * The track duration in seconds as a floating-point number.
@@ -49,7 +57,7 @@
 @property (readonly) NSUInteger introID;
 
 /**
-* oes this track contain adult language? A boolean.
+* Does this track contain adult language? A boolean.
 */
 @property (readonly) BOOL       explicit;
 
@@ -108,6 +116,10 @@
 * via a load call.
 */
 @property (strong, readonly) NSArray *vocalsIDs;
+
+/// ----------------------------------
+/// @name Streaming content
+/// ----------------------------------
 
 /**
 * URL to stream this track from. Streaming URL not available

@@ -174,6 +174,7 @@
 		AF23F3E87726E357E1F599AB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		AF23F510DF17B45C3AACED2C /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = AppledocSettings.plist; sourceTree = "<group>"; };
 		AF23F89A01705B16752A1872 /* Yeti.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = Yeti.podspec; sourceTree = "<group>"; };
+		AF23F9B481FD9C0D84DC9094 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		B8993957AB304FED96908C14 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -213,6 +214,7 @@
 				AF23F510DF17B45C3AACED2C /* AppledocSettings.plist */,
 				AF23F3E87726E357E1F599AB /* Podfile */,
 				AF23F89A01705B16752A1872 /* Yeti.podspec */,
+				AF23F9B481FD9C0D84DC9094 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
