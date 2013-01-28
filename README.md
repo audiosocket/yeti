@@ -1,7 +1,7 @@
 # Yeti - Audiosocket iOS SDK
 
-Yeti is a iOS SDK comprised of Objective-C objects that provide simplified access to the
-[Audiosocket MaaS API](http://http://develop.audiosocket.com/).
+Yeti is an iOS SDK comprised of Objective-C objects that provide simplified access to a
+subset of the [Audiosocket MaaS API](http://http://develop.audiosocket.com/).
 MaaS provides a rich integration API that allows you to search, stream, and license
 thousands of tracks from the world's best
 independent musicians. Need help? Want more info or an API key?
@@ -16,17 +16,16 @@ framework  by [Blake Watters](http://twitter.com/blakewatters) and the rest of t
 
 ## Installation
 
-Installation is done via the [CocoaPods](http://cocoapods.org/) package manager,
-as it provides flexible dependency management and dead simple installation.
+Installation is done via the [CocoaPods](http://cocoapods.org/) package manager.
 
-Install CocoaPods if you haven't already
+Install CocoaPods if you haven't already:
 
 ``` bash
 $ [sudo] gem install cocoapods
 $ pod setup
 ```
 
-Create a text file called Podfile in your project directory.
+Create a text file called Podfile in your project directory:
 
 ``` bash
 $ cd /path/to/ProjectDirectory
@@ -43,7 +42,7 @@ Download all dependencies defined in `Podfile' and creates an Xcode Pods library
 $ pod install
 ```
 
-Open your project in Xcode from the workspace file (.xcworkspace) file.
+Open your project in Xcode from the workspace file (.xcworkspace) file:
 
 ``` bash
 $ open <Project>.xcworkspace
@@ -59,21 +58,18 @@ so you can make subsequent network requests but it makes no network requests its
 #import <Yeti/Yeti.h>
 #import "AppDelegate.h"
 
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // API_BASE_URL is normally https://api.audiosocket.com/v5 for the production environment.
-    // A sandbox environemnt is also available upon request.
-    //
-    // YOUR_API_TOKEN is the account token provided to you by Audiosocket.
-
     [ASApi initWithBaseURL:@"API_BASE_URL" token:@"YOUR_API_TOKEN"];
 
     return YES;
 }
 ```
+
+* API_BASE_URL Normally https://api.audiosocket.com/v5 for the production environment. A sandbox environemnt is also available upon request.
+* YOUR_API_TOKEN Account token provided to you by Audiosocket.
 
 
 ## License
