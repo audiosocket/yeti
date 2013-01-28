@@ -10,7 +10,7 @@ Drop us a line at api@audiosocket.com and we'll get you squared away.
 Please take time to read through the [Audiosocket MaaS API](http://http://develop.audiosocket.com/) to get
 a better understanding of the underlying REST API that Yeti accesses.
 The underlying data used for querying the API and paginating are very similar in Yeti.
-Class level documentation for Yeti is available at ....
+Class level documentation for Yeti is available at (http://develop.audiosocket.com/yeti)
 
 Yeti takes full advantage of the excellent [RestKit](https://github.com/RestKit/RestKit)
 framework  by [Blake Watters](http://twitter.com/blakewatters) and the rest of the RestKit team.
