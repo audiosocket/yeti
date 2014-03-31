@@ -71,6 +71,7 @@
 + (RKResponseDescriptor *) addInstanceResponseDescriptor {
     RKResponseDescriptor *descriptor =
         [RKResponseDescriptor responseDescriptorWithMapping:self.instanceObjectMapping
+                                                     method:RKRequestMethodAny
                                                 pathPattern:self.pathPatternForMapping
                                                     keyPath:nil
                                                 statusCodes:[NSIndexSet indexSetWithIndex:200]];
@@ -81,6 +82,7 @@
 
 + (RKResponseDescriptor *) collectionResponseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:self.instanceObjectMapping
+                                                        method:RKRequestMethodAny
                                                    pathPattern:nil
                                                        keyPath:@"data"
                                                    statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
