@@ -46,7 +46,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@, children: %i", [super description], self.children.count];
+    return [NSString stringWithFormat:@"%@, children: %lu", [super description], (unsigned long)self.children.count];
 }
 
 @end
