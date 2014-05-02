@@ -170,18 +170,18 @@
     // Get the start and end indexes to add/replace the newly loaded objects into.
 
     NSUInteger start = (page - 1) * self.per;
-    int end = start + array.count;
+    NSInteger end = start + array.count;
 
     // When pages are skipped we fill in any missing pages with nil elements.
     // Yes, this can result in up to 60,000 items in the array. But hopefully
     // most will be nil.
 
-    for (int k = objects.count; k < start; k++) {
+    for (NSInteger k = objects.count; k < start; k++) {
         [objects addObject:nil];
     }
 
     NSUInteger index = 0;
-    for (int j = start; j < end; j++) {
+    for (NSInteger j = start; j < end; j++) {
         if (j >= objects.count) {
             [objects addObject:[array objectAtIndex:index]];
         } else {

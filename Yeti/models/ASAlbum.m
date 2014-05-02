@@ -17,7 +17,7 @@
 - (ASPaginator *)loadTracksWithSuccess:(void (^)(ASAlbum *))success
                                failure:(void (^)(NSError *))failure {
 
-    NSString *path = [NSString stringWithFormat:@"%@/%i/tracks", [ASAlbum endpointRoot], self.ID];
+    NSString *path = [NSString stringWithFormat:@"%@/%li/tracks", [ASAlbum endpointRoot], (long)self.ID];
 
     if (!self.tracks) {
         self.tracks = [ASTrack createPaginator];

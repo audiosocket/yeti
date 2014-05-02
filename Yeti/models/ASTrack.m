@@ -43,11 +43,11 @@
 }
 
 - (NSString *)instanceGetEndpoint {
-    return [NSString stringWithFormat:@"%@/%i.mp3/url?lifetime=40000", [ASTransientURL endpointRoot], self.ID];
+    return [NSString stringWithFormat:@"%@/%li.mp3/url?lifetime=40000", [ASTransientURL endpointRoot], (long)self.ID];
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@: until: %i, url: %@", self.className, self.until, self.url];
+    return [NSString stringWithFormat:@"%@: until: %lu, url: %@", self.className, (unsigned long)self.until, self.url];
 }
 
 @end
@@ -120,7 +120,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"ASTrack: id: %i, name: %@", self.ID, self.name];
+    return [NSString stringWithFormat:@"ASTrack: id: %li, name: %@", (long)self.ID, self.name];
 }
 
 - (void)loadStreamingURLWithSuccess:(void (^)(ASTrack *))success

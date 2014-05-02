@@ -26,7 +26,7 @@
 - (ASPaginator *)loadAlbumsWithSuccess:(void (^)(ASArtist *album))success
                                failure:(void (^)(NSError *error))failure {
 
-    NSString *path = [NSString stringWithFormat:@"%@/%i/albums", [ASArtist endpointRoot], self.ID];
+    NSString *path = [NSString stringWithFormat:@"%@/%li/albums", [ASArtist endpointRoot], (long)self.ID];
 
     if (!self.albums) {
         self.albums = [ASAlbum createPaginator];
@@ -54,7 +54,7 @@
 - (ASPaginator *)loadTracksWithSuccess:(void (^)(ASArtist *album))success
                                failure:(void (^)(NSError *error))failure {
 
-    NSString *path = [NSString stringWithFormat:@"%@/%i/tracks", [ASArtist endpointRoot], self.ID];
+    NSString *path = [NSString stringWithFormat:@"%@/%li/tracks", [ASArtist endpointRoot], (long)self.ID];
 
     if (!self.tracks) {
         self.tracks = [ASTrack createPaginator];

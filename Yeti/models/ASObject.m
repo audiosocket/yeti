@@ -71,6 +71,7 @@
 + (RKResponseDescriptor *) addInstanceResponseDescriptor {
     RKResponseDescriptor *descriptor =
         [RKResponseDescriptor responseDescriptorWithMapping:self.instanceObjectMapping
+                                                     method:RKRequestMethodAny
                                                 pathPattern:self.pathPatternForMapping
                                                     keyPath:nil
                                                 statusCodes:[NSIndexSet indexSetWithIndex:200]];
@@ -81,6 +82,7 @@
 
 + (RKResponseDescriptor *) collectionResponseDescriptor {
     return [RKResponseDescriptor responseDescriptorWithMapping:self.instanceObjectMapping
+                                                        method:RKRequestMethodAny
                                                    pathPattern:nil
                                                        keyPath:@"data"
                                                    statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
@@ -99,7 +101,7 @@
     NSMutableString *path = [[NSMutableString alloc] initWithString:[self instanceGetEndpoint]];
 
     [path replaceOccurrencesOfString:@":id"
-                          withString:[NSString stringWithFormat:@"%d", ID]
+                          withString:[NSString stringWithFormat:@"%ld", (long)ID]
                              options:NSLiteralSearch
                                range:NSMakeRange(0, path.length)
     ];
@@ -197,7 +199,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@: id: %i, name: %@", self.className, self.ID, self.name];
+    return [NSString stringWithFormat:@"%@: id: %li, name: %@", self.className, (long)self.ID, self.name];
 }
 
 - (void) loadWithSuccess:(void (^)(id))success
